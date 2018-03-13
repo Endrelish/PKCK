@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE BazaFilmów SYSTEM "films.dtd" >
+<?xml-stylesheet type="text/css" href="filmsStylesheet.css"?>
 <BazaFilmów>
 <Autorzy>
     <Autor>
@@ -152,10 +153,7 @@
             <DataPremiery>06-12-1969</DataPremiery>
             <Kraj>Polska</Kraj>
             <Reżyser>Tadeusz Chmielewski</Reżyser>
-        </Film>
-        
-        
-        
+        </Film>       
     </Filmy>
     
 </BazaFilmów>

@@ -1,0 +1,23 @@
+/* Cascade style sheet based on films.dtd DTD */
+/*BazaFilmów { display: block } */
+
+
+Autorzy:before {
+    content: "Autorzy: ";
+    color: gray;
+    margin: 20px;  
+    display: inline-block;
+}
+Autorzy > Autor{
+    content: attr(Imiê) " " attr(Nazwisko);
+    color: coral; 
+    display: inline;
+}
+Gatunki { display: block }
+Gatunek { display: block }
+Filmy { display: block }
+Film { display: block }
+Tytu³ { display: block }
+DataPremiery { display: block }
+Kraj { display: block }
+Re¿yser { display: block }
