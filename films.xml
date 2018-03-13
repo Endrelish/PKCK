@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE BazaFilmów SYSTEM "films.dtd" >
 <BazaFilmów>
 <Autorzy>
     <Autor>
@@ -13,7 +14,7 @@
 
 
     <Gatunki>
-        <Gatuenk Nazwa="Dramat" Id="DR"/>
+        <Gatunek Nazwa="Dramat" Id="DR"/>
         <Gatunek Nazwa="Komedia" Id="KO"/>
         <Gatunek Nazwa="Sci-Fi" Id="SC"/>           
     </Gatunki>

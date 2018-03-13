@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!ELEMENT BazaFilmów (Autorzy,Gatunki,Filmy)>
+
+<!ELEMENT Autorzy (Autor)*>
+
+<!ELEMENT Autor (Imię+,Nazwisko)>
+
+<!ELEMENT Imię (#PCDATA)>
+
+<!ELEMENT Nazwisko (#PCDATA)>
+
+<!ELEMENT Gatunki (Gatunek)*>
+
+<!ELEMENT Gatunek EMPTY>
+<!ATTLIST Gatunek
+    Nazwa CDATA #REQUIRED
+    Id CDATA #REQUIRED
+  >
+
+<!ELEMENT Filmy (Film)*>
+
+<!ELEMENT Film (Tytuł,DataPremiery,Kraj+,Reżyser)>
+<!ATTLIST Film
+    IdGarunku CDATA #REQUIRED
+  >
+
+<!ELEMENT Tytuł (#PCDATA)>
+
+<!ELEMENT DataPremiery (#PCDATA)>
+
+<!ELEMENT Kraj (#PCDATA)>
+
+<!ELEMENT Reżyser (#PCDATA)>
