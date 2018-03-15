@@ -1,5 +1,5 @@
 /* Cascade style sheet based on films.dtd DTD */
-/*BazaFilmÛw { display: block } */
+/*BazaFilm√≥w { display: block } */
 
 
 Autorzy:before {
@@ -9,15 +9,45 @@ Autorzy:before {
     display: inline-block;
 }
 Autorzy > Autor{
-    content: attr(ImiÍ) " " attr(Nazwisko);
+    content: attr(Imiƒô) " " attr(Nazwisko);
     color: coral; 
     display: inline;
 }
+Film {
+	    font-size: 80%; 
+    text-align:text-top;
+    display: inline-block;
+    min-width: 20%;
+    margin: 5px;
+    padding:10px;    
+	background-color: orange;
+}
+
 Gatunki { display: block }
 Gatunek { display: block }
 Filmy { display: block }
-Film { display: block }
-Tytu≥ { display: block }
+
+Tytu≈Ç {
+		font-size: 100%; 
+        display:block-line;
+        color: red;
+		font-style:italic;
+}
+DataPremiery:before { 
+		content:"Data premiery:";
+		color:white; 
+		margin: 20px; 
+}
 DataPremiery { display: block }
-Kraj { display: block }
-Reøyser { display: block }
+Kraj:nth-child(3):before { 
+		content:"Kraj produkcji:";
+		color:white; 
+		margin: 20px; 
+}
+Kraj { display: inline-block }
+Re≈ºyser:before { 
+		content:"Re≈ºyser:";
+		color:white; 
+		margin: 20px; 
+}
+Re≈ºyser { display: block }
