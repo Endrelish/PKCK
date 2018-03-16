@@ -15,33 +15,33 @@
 
 
     <Gatunki>
-        <Gatunek Nazwa="Dramat" Id="DR"/>
-        <Gatunek Nazwa="Komedia" Id="KO"/>
-        <Gatunek Nazwa="Sci-Fi" Id="SC"/>           
+        <Gatunek Nazwa="Dramat" Id="Dramat"/>
+        <Gatunek Nazwa="Komedia" Id="Komedia"/>
+        <Gatunek Nazwa="Sci-Fi" Id="Sci-Fi"/>           
     </Gatunki>
     
     
     
     <Filmy>
-        <Film IdGarunku="DR">
+        <Film IdGatunku="Dramat">
             <Tytuł>Zielona Mila</Tytuł>
             <DataPremiery>06-12-1999</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Frank Darabont</Reżyser>
         </Film>
-        <Film IdGarunku="DR">
+        <Film IdGatunku="Dramat">
             <Tytuł>Skazani na Shawshank</Tytuł>
             <DataPremiery>06-12-1994</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Frank Darabont</Reżyser>
         </Film>
-        <Film IdGarunku="DR">
+        <Film IdGatunku="Dramat">
             <Tytuł>Taksówkarz</Tytuł>
             <DataPremiery>06-12-1976</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Martin Scorsese</Reżyser>
         </Film>
-        <Film IdGarunku="DR">
+        <Film IdGatunku="Dramat">
             <Tytuł>Babel</Tytuł>
             <DataPremiery>06-12-2006</DataPremiery>
             <Kraj>Francja</Kraj>
@@ -49,7 +49,7 @@
             <Kraj>USA</Kraj>
             <Reżyser>Alejandro Gonzalez Inarritu</Reżyser>
         </Film>
-        <Film IdGarunku="DR">
+        <Film IdGatunku="Dramat">
             <Tytuł>Życie za życie</Tytuł>
             <DataPremiery>06-12-2003</DataPremiery>
             <Kraj>Niemcy</Kraj>
@@ -57,33 +57,33 @@
             <Kraj>Wielka Brytania</Kraj>
             <Reżyser>Alan Parker</Reżyser>
         </Film>
-        <Film IdGarunku="DR">
+        <Film IdGatunku="Dramat">
             <Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
             <DataPremiery>06-12-2006</DataPremiery>
             <Kraj>Polska</Kraj>
             <Reżyser>Marek Koterski</Reżyser>
         </Film>
-        <Film IdGarunku="SC">
+        <Film IdGatunku="Sci-Fi">
             <Tytuł>Avatar</Tytuł>
             <DataPremiery>06-12-2009</DataPremiery>
             <Kraj>USA</Kraj>
             <Kraj>Wielka Brytania</Kraj>
             <Reżyser>James Cameron</Reżyser>
         </Film>
-        <Film IdGarunku="SC">
+        <Film IdGatunku="Sci-Fi">
             <Tytuł>Terminator</Tytuł>
             <DataPremiery>06-12-1984</DataPremiery>
             <Kraj>USA</Kraj>
             <Kraj>Wielka Brytania</Kraj>
             <Reżyser>James Cameron</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Bruce Wszechmogący</Tytuł>
             <DataPremiery>06-12-2003</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Tom Shadyac</Reżyser>
         </Film>
-         <Film IdGarunku="SC">
+         <Film IdGatunku="Sci-Fi">
             <Tytuł>Interstellar</Tytuł>
             <DataPremiery>06-12-2014</DataPremiery>
             <Kraj>Kanada</Kraj>
@@ -91,44 +91,44 @@
             <Kraj>Wielka Brytania</Kraj>
             <Reżyser>Christopher Nolan</Reżyser>
         </Film>
-        <Film IdGarunku="SC">
+        <Film IdGatunku="Sci-Fi">
             <Tytuł>Iron Man</Tytuł>
             <DataPremiery>06-12-2008</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Jon Favreau</Reżyser>
         </Film>
-        <Film IdGarunku="SC">
+        <Film IdGatunku="Sci-Fi">
             <Tytuł>Avengers</Tytuł>
             <DataPremiery>06-12-2012</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Joss Whedon</Reżyser>
         </Film>
-        <Film IdGarunku="SC">
+        <Film IdGatunku="Sci-Fi">
             <Tytuł>Marsjanin</Tytuł>
             <DataPremiery>06-12-2015</DataPremiery>
             <Kraj>USA</Kraj>
             <Kraj>Wielka Brytania</Kraj>
             <Reżyser>Ridley Scott</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Killer</Tytuł>
             <DataPremiery>06-12-1997</DataPremiery>
             <Kraj>Polska</Kraj>
             <Reżyser>Janusz Machulski</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Chłopaki nie płaczą</Tytuł>
             <DataPremiery>06-12-2000</DataPremiery>
             <Kraj>Polska</Kraj>
             <Reżyser>Olaf Lubaszenko</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Miś</Tytuł>
             <DataPremiery>06-12-1980</DataPremiery>
             <Kraj>Polska</Kraj>
             <Reżyser>Stanisław Bareja</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>To właśnie miłość</Tytuł>
             <DataPremiery>06-12-2003</DataPremiery>
             <Kraj>Francja</Kraj>
@@ -136,19 +136,19 @@
             <Kraj>Wielka Brytania</Kraj>
             <Reżyser>Richard Curtis</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Ace Ventura: Psi detektyw</Tytuł>
             <DataPremiery>06-12-1994</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Tom Shadyac</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Głupi i głupszy</Tytuł>
             <DataPremiery>06-12-1994</DataPremiery>
             <Kraj>USA</Kraj>
             <Reżyser>Bobby Farrally</Reżyser>
         </Film>
-        <Film IdGarunku="KO">
+        <Film IdGatunku="Komedia">
             <Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>
             <DataPremiery>06-12-1969</DataPremiery>
             <Kraj>Polska</Kraj>

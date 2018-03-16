@@ -15,14 +15,14 @@
 <!ELEMENT Gatunek EMPTY>
 <!ATTLIST Gatunek
     Nazwa CDATA #REQUIRED
-    Id CDATA #REQUIRED
+    Id ID #REQUIRED
   >
 
 <!ELEMENT Filmy (Film)*>
 
 <!ELEMENT Film (Tytuł,DataPremiery,Kraj+,Reżyser)>
 <!ATTLIST Film
-    IdGarunku CDATA #REQUIRED
+    IdGatunku IDREF #REQUIRED
   >
 
 <!ELEMENT Tytuł (#PCDATA)>
