@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-
+        <!ENTITY % Ocena "(1|2|3|4|5)">
 <!ELEMENT BazaFilmów (Autorzy,Gatunki,Filmy)>
 
 <!ELEMENT Autorzy (Autor)*>
@@ -23,6 +23,7 @@
 <!ELEMENT Film (Tytuł,DataPremiery,Kraj+,Reżyser)>
 <!ATTLIST Film
     IdGatunku IDREF #REQUIRED
+        Ocena %Ocena; #REQUIRED
   >
 
 <!ELEMENT Tytuł (#PCDATA)>
@@ -32,3 +33,5 @@
 <!ELEMENT Kraj (#PCDATA)>
 
 <!ELEMENT Reżyser (#PCDATA)>
+
+
