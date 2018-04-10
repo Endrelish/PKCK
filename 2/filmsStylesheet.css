@@ -1,0 +1,185 @@
+/* Cascade style sheet based on films.dtd DTD */
+BazaFilmów {
+    background-color: #ffdb8c
+}
+
+Autorzy:before {
+    content: "Autorzy: ";
+    color: darkred;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    font-size: 120%;
+}
+
+Autorzy {
+    margin: 2px;
+    padding: 10px;
+    background-color: burlywood;
+    border-radius: 5%;
+    border: dotted;
+    min-width: 400px;
+    max-width: 100%;
+    display: block;
+    text-align: center;
+}
+
+Autor:hover {
+    background-color: chocolate;
+    color: burlywood;
+}
+
+Autor {
+    content: attr(Imię) " " attr(Nazwisko);
+    font-size: 80%;
+    display: inline-block;
+    max-width: 30%;
+    margin: 2px;
+    padding: 5px;
+    background-color: orange;
+    border-radius: 5%;
+    border: dashed #336699;
+    text-align: center;
+    color: brown;
+    font-weight: bold;
+    min-width: 200px;
+}
+
+Filmy {
+    display: block;
+    text-align: center;
+}
+
+Film {
+    font-size: 80%;
+    text-align: left;
+    display: inline-block;
+    min-width: 350px;
+    max-width: 25%;
+    margin: 5px;
+    padding: 10px;
+    background-color: orange;
+    border-radius: 5%;
+    border: dotted #336699;
+}
+
+Filmy > Film:hover {
+    background-color: #0071a8;
+}
+
+Film[IdGatunku="Dramat"] {
+    background-color: lightslategrey;
+}
+
+Film[IdGatunku="Komedia"] {
+    background-color: #e2a0a9;
+}
+
+Film[IdGatunku="Sci-Fi"] {
+    background-color: #29cc6e;
+}
+
+Film:before {
+    content: attr(IdGatunku);
+    display: block;
+    font-family: Georgia;
+}
+
+Film[Ocena="5"]:after {
+    content: "\2605\2605\2605\2605\2605";
+    display: inline-block;
+    color: yellow;
+    margin-left: 20px;
+    font-size: large;
+}
+
+Film[Ocena="4"]:after {
+    content: "\2605\2605\2605\2605";
+    display: inline-block;
+    color: yellow;
+    margin-left: 20px;
+    font-size: large;
+}
+
+Film[Ocena="3"]:after {
+    content: "\2605\2605\2605";
+    display: inline-block;
+    color: yellow;
+    margin-left: 20px;
+    font-size: large;
+}
+
+Film[Ocena="2"]:after {
+    content: "\2605\2605";
+    display: inline-block;
+    color: yellow;
+    margin-left: 20px;
+    font-size: large;
+}
+
+Film[Ocena="1"]:after {
+    content: "\2605";
+    display: inline-block;
+    color: yellow;
+    margin-left: 20px;
+    font-size: large;
+}
+
+Tytuł {
+    font-size: 150%;
+    color: firebrick;
+    font-style: italic;
+    font-weight: bold;
+}
+
+OryginalnyTytuł:before{
+    content: "(org. ";
+}
+
+OryginalnyTytuł:after{
+    content: ")";
+}
+
+DataPremiery, Reżyser{
+    display: block
+}
+Cena {
+    display: block;
+    text-align: right;
+    font-size: large;
+    font-weight: bold;
+    color: yellow;
+}
+
+DataPremiery:before {
+    content: "Data premiery:";
+    color: white;
+    margin: 20px;
+}
+
+Cena:before {
+    content: "Cena: ";
+    color: white;
+}
+Cena:after {
+    content: "zł";
+    color: yellow;
+    font-size: large;
+    font-weight: bold;
+}
+
+Reżyser:before {
+    content: "Reżyser:";
+    color: white;
+    margin: 20px;
+}
+
+Kraje:before {
+    content: "Kraj produkcji:";
+    color: white;
+    margin: 20px;
+}
+
+
+
+

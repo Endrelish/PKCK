@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:baza="http://www.example.org/baza"
+            targetNamespace="http://www.example.org/baza"
+            elementFormDefault="qualified"
+>
+
+    <xsd:group name="Osoba">
+        <xsd:sequence>
+            <xsd:element minOccurs="1" maxOccurs="unbounded" ref="baza:Imię"/>
+            <xsd:element ref="baza:Nazwisko"/>
+        </xsd:sequence>
+    </xsd:group>
+    <xsd:element name="BazaFilmów">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="baza:Autorzy"/>
+                <xsd:element ref="baza:Gatunki"/>
+                <xsd:element ref="baza:Filmy"/>
+            </xsd:sequence>
+        </xsd:complexType>
+
+
+        <!--KLUCZE-->
+        <xsd:key name="GatunekID">
+            <xsd:selector xpath="baza:Gatunki/baza:Gatunek"/>
+            <xsd:field xpath="@Id"/>
+        </xsd:key>
+        <xsd:keyref name="GatunekRef" refer="baza:GatunekID">
+            <xsd:selector xpath="baza:Filmy/baza:Film"/>
+            <xsd:field xpath="@IdGatunku"/>
+        </xsd:keyref>
+    </xsd:element>
+
+    <!--AUTORZY-->
+    <xsd:element name="Autorzy">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="2">
+                <xsd:element ref="baza:Autor"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Autor">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:group ref="baza:Osoba"/>
+                <xsd:element type="baza:IndeksTyp" name="Indeks"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Imię" type="xsd:string"/>
+    <xsd:element name="Nazwisko" type="xsd:string"/>
+
+    <xsd:simpleType name="IndeksTyp">
+        <xsd:restriction base="xsd:string">
+            <xsd:pattern value="\d{6}"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+    <!--GATUNKI-->
+    <xsd:element name="Gatunki">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="baza:Gatunek"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Gatunek">
+        <xsd:complexType>
+            <xsd:attribute name="Nazwa" type="xsd:string" use="required"/>
+            <xsd:attribute name="Id" type="xsd:string" use="required"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--FILMY-->
+    <xsd:element name="Filmy">
+        <xsd:complexType>
+            <xsd:sequence minOccurs="0" maxOccurs="unbounded">
+                <xsd:element ref="baza:Film"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Film">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element ref="baza:Tytuł"/>
+                <xsd:element minOccurs="0" ref="baza:OryginalnyTytuł"/>
+                <xsd:element ref="baza:DataPremiery"/>
+                <xsd:element ref="baza:Kraje"/>
+                <xsd:element ref="baza:Reżyser"/>
+                <xsd:element type="baza:CenaTyp" name="Cena"/>
+            </xsd:sequence>
+            <xsd:attribute name="IdGatunku" type="xsd:string" use="required"/>
+            <xsd:attribute name="Ocena" use="required">
+                <xsd:simpleType>
+                    <xsd:restriction base="xsd:NMTOKEN">
+                        <xsd:enumeration value="1"/>
+                        <xsd:enumeration value="2"/>
+                        <xsd:enumeration value="3"/>
+                        <xsd:enumeration value="4"/>
+                        <xsd:enumeration value="5"/>
+                    </xsd:restriction>
+                </xsd:simpleType>
+            </xsd:attribute>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Tytuł" type="xsd:string"/>
+    <xsd:element name="OryginalnyTytuł" type="xsd:string"/>
+    <xsd:element name="DataPremiery" type="xsd:date"/>
+    <xsd:element name="Kraje">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element minOccurs="1" maxOccurs="unbounded" ref="baza:Kraj"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:element name="Kraj" type="xsd:string"/>
+    <xsd:element name="Reżyser">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:group ref="baza:Osoba"/>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <xsd:simpleType name="CenaTyp">
+        <xsd:restriction base="xsd:decimal">
+            <xsd:fractionDigits value="2"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+</xsd:schema>
