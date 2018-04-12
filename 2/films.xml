@@ -41,6 +41,7 @@
         </Film>
         <Film IdGatunku="Dramat" Ocena="4">
             <Tytuł>Skazani na Shawshank</Tytuł>
+            <OryginalnyTytuł>The Shawshank Redemption</OryginalnyTytuł>
             <DataPremiery>1994-12-25</DataPremiery>
             <Kraje>
                 <Kraj>USA</Kraj>
@@ -49,10 +50,11 @@
                 <Imię>Frank</Imię>
                 <Nazwisko>Darabont</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>13.99</Cena>
         </Film>
         <Film IdGatunku="Dramat" Ocena="5">
             <Tytuł>Taksówkarz</Tytuł>
+            <OryginalnyTytuł>Taksówkarz</OryginalnyTytuł>
             <DataPremiery>1976-12-06</DataPremiery>
             <Kraje>
                 <Kraj>USA</Kraj>
@@ -61,7 +63,7 @@
                 <Imię>Martin</Imię>
                 <Nazwisko>Scorsese</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>14.99</Cena>
         </Film>
         <Film IdGatunku="Dramat" Ocena="4">
             <Tytuł>Babel</Tytuł>
@@ -76,10 +78,11 @@
                 <Imię>Gonzalez</Imię>
                 <Nazwisko>Inarritu</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>15.99</Cena>
         </Film>
         <Film IdGatunku="Dramat" Ocena="5">
             <Tytuł>Życie za życie</Tytuł>
+            <OryginalnyTytuł>The Life of David Gale</OryginalnyTytuł>
             <DataPremiery>2003-12-25</DataPremiery>
             <Kraje>
                 <Kraj>Niemcy</Kraj>
@@ -90,7 +93,7 @@
                 <Imię>Alan</Imię>
                 <Nazwisko>Parker</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>16.99</Cena>
         </Film>
         <Film IdGatunku="Dramat" Ocena="4">
             <Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
@@ -102,7 +105,7 @@
                 <Imię>Marek</Imię>
                 <Nazwisko>Koterski</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>15.99</Cena>
         </Film>
         <Film IdGatunku="Sci-Fi" Ocena="5">
             <Tytuł>Avatar</Tytuł>
@@ -115,10 +118,11 @@
                 <Imię>James</Imię>
                 <Nazwisko>Cameron</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>14.99</Cena>
         </Film>
         <Film IdGatunku="Sci-Fi" Ocena="4">
             <Tytuł>Terminator</Tytuł>
+            <OryginalnyTytuł>The Terminator</OryginalnyTytuł>
             <DataPremiery>1984-12-25</DataPremiery>
             <Kraje>
                 <Kraj>USA</Kraj>
@@ -128,10 +132,11 @@
                 <Imię>James</Imię>
                 <Nazwisko>Cameron</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>13.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="5">
             <Tytuł>Bruce Wszechmogący</Tytuł>
+            <OryginalnyTytuł>Bruce Almighty</OryginalnyTytuł>
             <DataPremiery>2003-12-25</DataPremiery>
             <Kraje>
                 <Kraj>USA</Kraj>
@@ -155,7 +160,7 @@
                 <Imię>Christopher</Imię>
                 <Nazwisko>Nolan</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>11.99</Cena>
         </Film>
         <Film IdGatunku="Sci-Fi" Ocena="5">
             <Tytuł>Iron Man</Tytuł>
@@ -167,10 +172,11 @@
                 <Imię>Jon</Imię>
                 <Nazwisko>Favreau</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>10.99</Cena>
         </Film>
         <Film IdGatunku="Sci-Fi" Ocena="5">
             <Tytuł>Avengers</Tytuł>
+            <OryginalnyTytuł>The Avengers</OryginalnyTytuł>
             <DataPremiery>2012-12-25</DataPremiery>
             <Kraje>
                 <Kraj>USA</Kraj>
@@ -179,10 +185,11 @@
                 <Imię>Joss</Imię>
                 <Nazwisko>Whedon</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>9.99</Cena>
         </Film>
         <Film IdGatunku="Sci-Fi" Ocena="4">
             <Tytuł>Marsjanin</Tytuł>
+            <OryginalnyTytuł>The Martian</OryginalnyTytuł>
             <DataPremiery>2015-12-25</DataPremiery>
             <Kraje>
                 <Kraj>USA</Kraj>
@@ -192,7 +199,7 @@
                 <Imię>Ridley</Imię>
                 <Nazwisko>Scott</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>9.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="5">
             <Tytuł>Killer</Tytuł>
@@ -204,7 +211,7 @@
                 <Imię>Janusz</Imię>
                 <Nazwisko>Machulski</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>10.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="5">
             <Tytuł>Chłopaki nie płaczą</Tytuł>
@@ -228,10 +235,11 @@
                 <Imię>Stanisław</Imię>
                 <Nazwisko>Bareja</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>14.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="5">
             <Tytuł>To właśnie miłość</Tytuł>
+            <OryginalnyTytuł>Love Actually</OryginalnyTytuł>
             <DataPremiery>2003-12-25</DataPremiery>
             <Kraje>
                 <Kraj>Polska</Kraj>
@@ -240,22 +248,25 @@
                 <Imię>Richard</Imię>
                 <Nazwisko>Curtis</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>16.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="3">
-            <Tytuł>Ace Ventura: Psi detektyw</Tytuł>
-            <DataPremiery>1994-12-25</DataPremiery>
+            <Tytuł>Kac Vegas</Tytuł>
+            <OryginalnyTytuł>The Hangover</OryginalnyTytuł>
+            <DataPremiery>2009-08-07</DataPremiery>
             <Kraje>
-                <Kraj>Polska</Kraj>
+                <Kraj>Niemcy</Kraj>
+                <Kraj>USA</Kraj>
             </Kraje>
             <Reżyser>
-                <Imię>Tom</Imię>
-                <Nazwisko>Shadyac</Nazwisko>
+                <Imię>Todd</Imię>
+                <Nazwisko>Phillips</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>15.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="3">
             <Tytuł>Głupi i głupszy</Tytuł>
+            <OryginalnyTytuł>Dumb &amp; Dumber</OryginalnyTytuł>
             <DataPremiery>1994-12-25</DataPremiery>
             <Kraje>
                 <Kraj>Polska</Kraj>
@@ -264,7 +275,7 @@
                 <Imię>Bobby</Imię>
                 <Nazwisko>Farrally</Nazwisko>
             </Reżyser>
-            <Cena>12.99</Cena>
+            <Cena>14.99</Cena>
         </Film>
         <Film IdGatunku="Komedia" Ocena="4">
             <Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>

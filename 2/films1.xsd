@@ -5,12 +5,20 @@
             elementFormDefault="qualified"
 >
 
+    <!--GATUNEK - GRUPA ATRYBUTÓW -->
+    <xsd:attributeGroup name="gatunekAtrybuty">
+        <xsd:attribute name="Nazwa" type="xsd:string" use="required"/>
+        <xsd:attribute name="Id" type="xsd:string" use="required"/>
+    </xsd:attributeGroup>
+
+    <!--OSOBA - GRUPA-->
     <xsd:group name="Osoba">
         <xsd:sequence>
             <xsd:element minOccurs="1" maxOccurs="unbounded" ref="baza:Imię"/>
             <xsd:element ref="baza:Nazwisko"/>
         </xsd:sequence>
     </xsd:group>
+
     <xsd:element name="BazaFilmów">
         <xsd:complexType>
             <xsd:sequence>
@@ -67,8 +75,7 @@
     </xsd:element>
     <xsd:element name="Gatunek">
         <xsd:complexType>
-            <xsd:attribute name="Nazwa" type="xsd:string" use="required"/>
-            <xsd:attribute name="Id" type="xsd:string" use="required"/>
+           <xsd:attributeGroup ref="baza:gatunekAtrybuty"/>
         </xsd:complexType>
     </xsd:element>
 
@@ -93,7 +100,7 @@
             <xsd:attribute name="IdGatunku" type="xsd:string" use="required"/>
             <xsd:attribute name="Ocena" use="required">
                 <xsd:simpleType>
-                    <xsd:restriction base="xsd:NMTOKEN">
+                    <xsd:restriction base="xsd:int">
                         <xsd:enumeration value="1"/>
                         <xsd:enumeration value="2"/>
                         <xsd:enumeration value="3"/>
@@ -125,6 +132,7 @@
     <xsd:simpleType name="CenaTyp">
         <xsd:restriction base="xsd:decimal">
             <xsd:fractionDigits value="2"/>
+            <xsd:minExclusive value="0"/>
         </xsd:restriction>
     </xsd:simpleType>
 </xsd:schema>

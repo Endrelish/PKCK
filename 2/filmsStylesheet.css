@@ -54,8 +54,8 @@ Film {
     font-size: 80%;
     text-align: left;
     display: inline-block;
-    min-width: 350px;
-    max-width: 25%;
+    min-width: 370px;
+    max-width: 370px;
     margin: 5px;
     padding: 10px;
     background-color: orange;
