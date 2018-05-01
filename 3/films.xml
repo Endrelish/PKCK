@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="filmsStylesheet.css"?>
+<BazaFilmów
+        >
+    <Autorzy>
+        <Autor>
+            <Imię>Bartłomiej</Imię>
+            <Nazwisko>Ciach</Nazwisko>
+            <Indeks>203860</Indeks>
+        </Autor>
+        <Autor>
+            <Imię>Paweł</Imię>
+            <Nazwisko>Purgat</Nazwisko>
+            <Indeks>203975</Indeks>
+        </Autor>
+    </Autorzy>
+
+
+    <Gatunki>
+        <Gatunek Nazwa="Dramat" Id="Dr"/>
+        <Gatunek Nazwa="Komedia" Id="Ko"/>
+        <Gatunek Nazwa="Sci-Fi" Id="SF"/>
+    </Gatunki>
+
+
+    <Filmy>
+        <Film IdGatunku="Dr" Ocena="5">
+            <Tytuł>Zielona Mila</Tytuł>
+            <OryginalnyTytuł>The Green Mile</OryginalnyTytuł>
+            <DataPremiery>1999-12-06</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Frank</Imię>
+                <Nazwisko>Darabont</Nazwisko>
+            </Reżyser>
+            <Cena>12.99</Cena>
+        </Film>
+        <Film IdGatunku="Dr" Ocena="4">
+            <Tytuł>Skazani na Shawshank</Tytuł>
+            <OryginalnyTytuł>The Shawshank Redemption</OryginalnyTytuł>
+            <DataPremiery>1994-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Frank</Imię>
+                <Nazwisko>Darabont</Nazwisko>
+            </Reżyser>
+            <Cena>13.99</Cena>
+        </Film>
+        <Film IdGatunku="Dr" Ocena="5">
+            <Tytuł>Taksówkarz</Tytuł>
+            <OryginalnyTytuł>Taksówkarz</OryginalnyTytuł>
+            <DataPremiery>1976-12-06</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Martin</Imię>
+                <Nazwisko>Scorsese</Nazwisko>
+            </Reżyser>
+            <Cena>14.99</Cena>
+        </Film>
+        <Film IdGatunku="Dr" Ocena="4">
+            <Tytuł>Babel</Tytuł>
+            <DataPremiery>2006-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Francja</Kraj>
+                <Kraj>Meksyk</Kraj>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Alejandro</Imię>
+                <Imię>Gonzalez</Imię>
+                <Nazwisko>Inarritu</Nazwisko>
+            </Reżyser>
+            <Cena>15.99</Cena>
+        </Film>
+        <Film IdGatunku="Dr" Ocena="5">
+            <Tytuł>Życie za życie</Tytuł>
+            <OryginalnyTytuł>The Life of David Gale</OryginalnyTytuł>
+            <DataPremiery>2003-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Niemcy</Kraj>
+                <Kraj>USA</Kraj>
+                <Kraj>Wielka Brytania</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Alan</Imię>
+                <Nazwisko>Parker</Nazwisko>
+            </Reżyser>
+            <Cena>16.99</Cena>
+        </Film>
+        <Film IdGatunku="Dr" Ocena="4">
+            <Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
+            <DataPremiery>2006-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Marek</Imię>
+                <Nazwisko>Koterski</Nazwisko>
+            </Reżyser>
+            <Cena>15.99</Cena>
+        </Film>
+        <Film IdGatunku="SF" Ocena="5">
+            <Tytuł>Avatar</Tytuł>
+            <DataPremiery>2009-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+                <Kraj>Wielka Brytania</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>James</Imię>
+                <Nazwisko>Cameron</Nazwisko>
+            </Reżyser>
+            <Cena>14.99</Cena>
+        </Film>
+        <Film IdGatunku="SF" Ocena="4">
+            <Tytuł>Terminator</Tytuł>
+            <OryginalnyTytuł>The Terminator</OryginalnyTytuł>
+            <DataPremiery>1984-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+                <Kraj>Wielka Brytania</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>James</Imię>
+                <Nazwisko>Cameron</Nazwisko>
+            </Reżyser>
+            <Cena>13.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="5">
+            <Tytuł>Bruce Wszechmogący</Tytuł>
+            <OryginalnyTytuł>Bruce Almighty</OryginalnyTytuł>
+            <DataPremiery>2003-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Tom</Imię>
+                <Nazwisko>Shadyac</Nazwisko>
+            </Reżyser>
+            <Cena>12.99</Cena>
+        </Film>
+        <Film IdGatunku="SF" Ocena="4">
+            <Tytuł>Interstellar</Tytuł>
+            <DataPremiery>2014-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Kanada</Kraj>
+                <Kraj>USA</Kraj>
+                <Kraj>Wielka Brytania</Kraj>
+            </Kraje>
+
+            <Reżyser>
+                <Imię>Christopher</Imię>
+                <Nazwisko>Nolan</Nazwisko>
+            </Reżyser>
+            <Cena>11.99</Cena>
+        </Film>
+        <Film IdGatunku="SF" Ocena="5">
+            <Tytuł>Iron Man</Tytuł>
+            <DataPremiery>2008-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Jon</Imię>
+                <Nazwisko>Favreau</Nazwisko>
+            </Reżyser>
+            <Cena>10.99</Cena>
+        </Film>
+        <Film IdGatunku="SF" Ocena="5">
+            <Tytuł>Avengers</Tytuł>
+            <OryginalnyTytuł>The Avengers</OryginalnyTytuł>
+            <DataPremiery>2012-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Joss</Imię>
+                <Nazwisko>Whedon</Nazwisko>
+            </Reżyser>
+            <Cena>9.99</Cena>
+        </Film>
+        <Film IdGatunku="SF" Ocena="4">
+            <Tytuł>Marsjanin</Tytuł>
+            <OryginalnyTytuł>The Martian</OryginalnyTytuł>
+            <DataPremiery>2015-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>USA</Kraj>
+                <Kraj>Wielka Brytania</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Ridley</Imię>
+                <Nazwisko>Scott</Nazwisko>
+            </Reżyser>
+            <Cena>9.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="5">
+            <Tytuł>Killer</Tytuł>
+            <DataPremiery>1997-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Janusz</Imię>
+                <Nazwisko>Machulski</Nazwisko>
+            </Reżyser>
+            <Cena>10.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="5">
+            <Tytuł>Chłopaki nie płaczą</Tytuł>
+            <DataPremiery>2000-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Olaf</Imię>
+                <Nazwisko>Lubaszenko</Nazwisko>
+            </Reżyser>
+            <Cena>12.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="4">
+            <Tytuł>Miś</Tytuł>
+            <DataPremiery>1980-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Stanisław</Imię>
+                <Nazwisko>Bareja</Nazwisko>
+            </Reżyser>
+            <Cena>14.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="5">
+            <Tytuł>To właśnie miłość</Tytuł>
+            <OryginalnyTytuł>Love Actually</OryginalnyTytuł>
+            <DataPremiery>2003-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Richard</Imię>
+                <Nazwisko>Curtis</Nazwisko>
+            </Reżyser>
+            <Cena>16.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="3">
+            <Tytuł>Kac Vegas</Tytuł>
+            <OryginalnyTytuł>The Hangover</OryginalnyTytuł>
+            <DataPremiery>2009-08-07</DataPremiery>
+            <Kraje>
+                <Kraj>Niemcy</Kraj>
+                <Kraj>USA</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Todd</Imię>
+                <Nazwisko>Phillips</Nazwisko>
+            </Reżyser>
+            <Cena>15.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="3">
+            <Tytuł>Głupi i głupszy</Tytuł>
+            <OryginalnyTytuł>Dumb &amp; Dumber</OryginalnyTytuł>
+            <DataPremiery>1994-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Bobby</Imię>
+                <Nazwisko>Farrally</Nazwisko>
+            </Reżyser>
+            <Cena>14.99</Cena>
+        </Film>
+        <Film IdGatunku="Ko" Ocena="4">
+            <Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>
+            <DataPremiery>1969-12-25</DataPremiery>
+            <Kraje>
+                <Kraj>Polska</Kraj>
+            </Kraje>
+            <Reżyser>
+                <Imię>Tadeusz</Imię>
+                <Nazwisko>Chmielewski</Nazwisko>
+            </Reżyser>
+            <Cena>12.99</Cena>
+        </Film>
+    </Filmy>
+</BazaFilmów>
