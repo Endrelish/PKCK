@@ -13,95 +13,121 @@
 </Autorzy>
 
 
-    
-        
-        
-        
-    
+    <Gatunki>
+<Gatunek>
+<Nazwa>Dramat</Nazwa>
+</Gatunek>
+<Gatunek>
+<Nazwa>Komedia</Nazwa>
+</Gatunek>
+<Gatunek>
+<Nazwa>Sci-Fi</Nazwa>
+</Gatunek>
+</Gatunki>
 
 
-    
-        <Film Gatunek="Dramat">
+    <Filmy>
+<Film Gatunek="Dramat">
 <Tytuł>Zielona Mila</Tytuł>
 <Ocena>5</Ocena>
+<Cena>12.99</Cena>
 </Film>
-        <Film Gatunek="Dramat">
+<Film Gatunek="Dramat">
 <Tytuł>Skazani na Shawshank</Tytuł>
 <Ocena>4</Ocena>
+<Cena>13.99</Cena>
 </Film>
-        <Film Gatunek="Dramat">
+<Film Gatunek="Dramat">
 <Tytuł>Taksówkarz</Tytuł>
 <Ocena>5</Ocena>
+<Cena>14.99</Cena>
 </Film>
-        <Film Gatunek="Dramat">
+<Film Gatunek="Dramat">
 <Tytuł>Babel</Tytuł>
 <Ocena>4</Ocena>
+<Cena>15.99</Cena>
 </Film>
-        <Film Gatunek="Dramat">
+<Film Gatunek="Dramat">
 <Tytuł>Życie za życie</Tytuł>
 <Ocena>5</Ocena>
+<Cena>16.99</Cena>
 </Film>
-        <Film Gatunek="Dramat">
+<Film Gatunek="Dramat">
 <Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
 <Ocena>4</Ocena>
+<Cena>15.99</Cena>
 </Film>
-        <Film Gatunek="Sci-Fi">
+<Film Gatunek="Sci-Fi">
 <Tytuł>Avatar</Tytuł>
 <Ocena>5</Ocena>
+<Cena>14.99</Cena>
 </Film>
-        <Film Gatunek="Sci-Fi">
+<Film Gatunek="Sci-Fi">
 <Tytuł>Terminator</Tytuł>
 <Ocena>4</Ocena>
+<Cena>13.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Bruce Wszechmogący</Tytuł>
 <Ocena>5</Ocena>
+<Cena>12.99</Cena>
 </Film>
-        <Film Gatunek="Sci-Fi">
+<Film Gatunek="Sci-Fi">
 <Tytuł>Interstellar</Tytuł>
 <Ocena>4</Ocena>
+<Cena>11.99</Cena>
 </Film>
-        <Film Gatunek="Sci-Fi">
+<Film Gatunek="Sci-Fi">
 <Tytuł>Iron Man</Tytuł>
 <Ocena>5</Ocena>
+<Cena>10.99</Cena>
 </Film>
-        <Film Gatunek="Sci-Fi">
+<Film Gatunek="Sci-Fi">
 <Tytuł>Avengers</Tytuł>
 <Ocena>5</Ocena>
+<Cena>9.99</Cena>
 </Film>
-        <Film Gatunek="Sci-Fi">
+<Film Gatunek="Sci-Fi">
 <Tytuł>Marsjanin</Tytuł>
 <Ocena>4</Ocena>
+<Cena>9.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Killer</Tytuł>
 <Ocena>5</Ocena>
+<Cena>10.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Chłopaki nie płaczą</Tytuł>
 <Ocena>5</Ocena>
+<Cena>12.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Miś</Tytuł>
 <Ocena>4</Ocena>
+<Cena>14.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>To właśnie miłość</Tytuł>
 <Ocena>5</Ocena>
+<Cena>16.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Kac Vegas</Tytuł>
 <Ocena>3</Ocena>
+<Cena>15.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Głupi i głupszy</Tytuł>
 <Ocena>3</Ocena>
+<Cena>14.99</Cena>
 </Film>
-        <Film Gatunek="Komedia">
+<Film Gatunek="Komedia">
 <Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>
 <Ocena>4</Ocena>
+<Cena>12.99</Cena>
 </Film>
-    
+</Filmy>
 <Statystyki>
 <Oceny>
 <Ocena1>0</Ocena1>
@@ -117,6 +143,6 @@
 <Sci-Fi>6</Sci-Fi>
 <Wszystkie>20</Wszystkie>
 </Gatunki>
-<DataRaportu>2018-05-01T11:29:21+02:00</DataRaportu>
+<DataRaportu>2018-05-02T10:49:39+02:00</DataRaportu>
 </Statystyki>
 </BazaFilmów>
