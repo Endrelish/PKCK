@@ -1,16 +1,17 @@
-<?xml version="1.0" encoding="UTF-8"?><BazaFilmów>
+<?xml version="1.0" encoding="UTF-8"?>
+<BazaFilmów>
     <Autorzy>
-<Autor>
-<Indeks>203860</Indeks>
-<Imię>Bartłomiej</Imię>
-<Nazwisko>Ciach</Nazwisko>
-</Autor>
-<Autor>
-<Indeks>203975</Indeks>
-<Imię>Paweł</Imię>
-<Nazwisko>Purgat</Nazwisko>
-</Autor>
-</Autorzy>
+      <Autor>
+         <Indeks>203860</Indeks>
+         <Imię>Bartłomiej</Imię>
+         <Nazwisko>Ciach</Nazwisko>
+      </Autor>
+      <Autor>
+         <Indeks>203975</Indeks>
+         <Imię>Paweł</Imię>
+         <Nazwisko>Purgat</Nazwisko>
+      </Autor>
+   </Autorzy>
 
 
     
@@ -21,134 +22,134 @@
 
 
     <Filmy>
-<Film Gatunek="Dramat">
-<Tytuł>Zielona Mila</Tytuł>
-<Ocena>5</Ocena>
-<Cena>12.99</Cena>
-</Film>
-<Film Gatunek="Dramat">
-<Tytuł>Skazani na Shawshank</Tytuł>
-<Ocena>4</Ocena>
-<Cena>13.99</Cena>
-</Film>
-<Film Gatunek="Dramat">
-<Tytuł>Taksówkarz</Tytuł>
-<Ocena>5</Ocena>
-<Cena>14.99</Cena>
-</Film>
-<Film Gatunek="Dramat">
-<Tytuł>Babel</Tytuł>
-<Ocena>4</Ocena>
-<Cena>15.99</Cena>
-</Film>
-<Film Gatunek="Dramat">
-<Tytuł>Życie za życie</Tytuł>
-<Ocena>5</Ocena>
-<Cena>16.99</Cena>
-</Film>
-<Film Gatunek="Dramat">
-<Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
-<Ocena>4</Ocena>
-<Cena>15.99</Cena>
-</Film>
-<Film Gatunek="Sci-Fi">
-<Tytuł>Avatar</Tytuł>
-<Ocena>5</Ocena>
-<Cena>14.99</Cena>
-</Film>
-<Film Gatunek="Sci-Fi">
-<Tytuł>Terminator</Tytuł>
-<Ocena>4</Ocena>
-<Cena>13.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Bruce Wszechmogący</Tytuł>
-<Ocena>5</Ocena>
-<Cena>12.99</Cena>
-</Film>
-<Film Gatunek="Sci-Fi">
-<Tytuł>Interstellar</Tytuł>
-<Ocena>4</Ocena>
-<Cena>11.99</Cena>
-</Film>
-<Film Gatunek="Sci-Fi">
-<Tytuł>Iron Man</Tytuł>
-<Ocena>5</Ocena>
-<Cena>10.99</Cena>
-</Film>
-<Film Gatunek="Sci-Fi">
-<Tytuł>Avengers</Tytuł>
-<Ocena>5</Ocena>
-<Cena>9.99</Cena>
-</Film>
-<Film Gatunek="Sci-Fi">
-<Tytuł>Marsjanin</Tytuł>
-<Ocena>4</Ocena>
-<Cena>9.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Killer</Tytuł>
-<Ocena>5</Ocena>
-<Cena>10.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Chłopaki nie płaczą</Tytuł>
-<Ocena>5</Ocena>
-<Cena>12.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Miś</Tytuł>
-<Ocena>4</Ocena>
-<Cena>14.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>To właśnie miłość</Tytuł>
-<Ocena>5</Ocena>
-<Cena>16.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Kac Vegas</Tytuł>
-<Ocena>3</Ocena>
-<Cena>15.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Głupi i głupszy</Tytuł>
-<Ocena>3</Ocena>
-<Cena>14.99</Cena>
-</Film>
-<Film Gatunek="Komedia">
-<Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>
-<Ocena>4</Ocena>
-<Cena>12.99</Cena>
-</Film>
-</Filmy>
-<Statystyki>
-<Oceny>
-<Ocena1>0</Ocena1>
-<Ocena2>0</Ocena2>
-<Ocena3>2</Ocena3>
-<Ocena4>8</Ocena4>
-<Ocena5>10</Ocena5>
-<Wszystkie>20</Wszystkie>
-</Oceny>
-<Gatunki>
-<Dramat>
-<Ilość>6</Ilość>
-<ŚredniaOcen>4.5</ŚredniaOcen>
-</Dramat>
-<Komedia>
-<Ilość>8</Ilość>
-<ŚredniaOcen>4.25</ŚredniaOcen>
-</Komedia>
-<Sci-Fi>
-<Ilość>6</Ilość>
-<ŚredniaOcen>4.5</ŚredniaOcen>
-</Sci-Fi>
-<Wszystkie>
-<Ilość>20</Ilość>
-<ŚredniaOcen>4.4</ŚredniaOcen>
-</Wszystkie>
-</Gatunki>
-<DataRaportu>2018-05-07T15:42:56+02:00</DataRaportu>
-</Statystyki>
+      <Film Gatunek="Dramat">
+         <Tytuł>Zielona Mila</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>12.99</Cena>
+      </Film>
+      <Film Gatunek="Dramat">
+         <Tytuł>Skazani na Shawshank</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>13.99</Cena>
+      </Film>
+      <Film Gatunek="Dramat">
+         <Tytuł>Taksówkarz</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>14.99</Cena>
+      </Film>
+      <Film Gatunek="Dramat">
+         <Tytuł>Babel</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>15.99</Cena>
+      </Film>
+      <Film Gatunek="Dramat">
+         <Tytuł>Życie za życie</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>16.99</Cena>
+      </Film>
+      <Film Gatunek="Dramat">
+         <Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>15.99</Cena>
+      </Film>
+      <Film Gatunek="Sci-Fi">
+         <Tytuł>Avatar</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>14.99</Cena>
+      </Film>
+      <Film Gatunek="Sci-Fi">
+         <Tytuł>Terminator</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>13.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Bruce Wszechmogący</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>12.99</Cena>
+      </Film>
+      <Film Gatunek="Sci-Fi">
+         <Tytuł>Interstellar</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>11.99</Cena>
+      </Film>
+      <Film Gatunek="Sci-Fi">
+         <Tytuł>Iron Man</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>10.99</Cena>
+      </Film>
+      <Film Gatunek="Sci-Fi">
+         <Tytuł>Avengers</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>9.99</Cena>
+      </Film>
+      <Film Gatunek="Sci-Fi">
+         <Tytuł>Marsjanin</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>9.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Killer</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>10.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Chłopaki nie płaczą</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>12.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Miś</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>14.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>To właśnie miłość</Tytuł>
+         <Ocena>5</Ocena>
+         <Cena>16.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Kac Vegas</Tytuł>
+         <Ocena>3</Ocena>
+         <Cena>15.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Głupi i głupszy</Tytuł>
+         <Ocena>3</Ocena>
+         <Cena>14.99</Cena>
+      </Film>
+      <Film Gatunek="Komedia">
+         <Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>
+         <Ocena>4</Ocena>
+         <Cena>12.99</Cena>
+      </Film>
+   </Filmy>
+   <Statystyki>
+      <Oceny>
+         <Ocena1>0</Ocena1>
+         <Ocena2>0</Ocena2>
+         <Ocena3>2</Ocena3>
+         <Ocena4>8</Ocena4>
+         <Ocena5>10</Ocena5>
+         <Wszystkie>20</Wszystkie>
+      </Oceny>
+      <Gatunki>
+         <Dramat>
+            <Ilość>6</Ilość>
+            <ŚredniaOcen>4.5</ŚredniaOcen>
+         </Dramat>
+         <Komedia>
+            <Ilość>8</Ilość>
+            <ŚredniaOcen>4.25</ŚredniaOcen>
+         </Komedia>
+         <Sci-Fi>
+            <Ilość>6</Ilość>
+            <ŚredniaOcen>4.5</ŚredniaOcen>
+         </Sci-Fi>
+         <Wszystkie>
+            <Ilość>20</Ilość>
+            <ŚredniaOcen>4.4</ŚredniaOcen>
+         </Wszystkie>
+      </Gatunki>
+      <DataRaportu>2018-05-07T20:23:55.655+02:00</DataRaportu>
+   </Statystyki>
 </BazaFilmów>
