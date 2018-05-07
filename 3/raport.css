@@ -7,37 +7,66 @@ div.authors {
     text-align: center;
 }
 
-div.authors>div.link {
-    text-align: left;
-}
 
-p.authors-title {
-    font-family: Georgia;
+div.author {
+    font-family: Calibra;
     font-size: 20px;
 }
-
-p.author {
-    font-family: Georgia;
-    font-size: 20px;
+table td:first-child {
+    color: firebrick;
+    font-style: italic;
+    font-weight: bold;
+}
+table tr:nth-child(even) {
+    background-color: burlywood;
+}
+table tr:nth-child(odd) {
+    background-color: orange;
 }
 
-th {
-    width: 160px;
-    text-align: center;   
+table tr:hover, table td:first-child:hover  {
+    background-color: chocolate;
+    color: burlywood;
 }
 
-td {
-    text-align: center; 
+table tr {
+    color: firebrick;
+}
+table th {
+    background-color: #824300;
+    color:  burlywood;
 }
 
+
+table, table th, table td, table tr {
+    border-radius: 5%;
+    border: dotted;
+    text-align: center;
+    font-size: 125%;
+}
+
+table {
+    margin-bottom: 50px;
+}
 
 div.date {
     text-align: center;
     font-family: Tahoma;
-    font-size: 18px;
-    margin: 50px 20px 10px 20px;    
+
 }
 
+div.stats {
+    display: block;
+    text-align: center;
+}
 
+div.marks {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10%;
+}
 
-
+div.genre {
+    display: inline-block;
+    text-align: center;
+}

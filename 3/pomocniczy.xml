@@ -13,17 +13,11 @@
 </Autorzy>
 
 
-    <Gatunki>
-<Gatunek>
-<Nazwa>Dramat</Nazwa>
-</Gatunek>
-<Gatunek>
-<Nazwa>Komedia</Nazwa>
-</Gatunek>
-<Gatunek>
-<Nazwa>Sci-Fi</Nazwa>
-</Gatunek>
-</Gatunki>
+    
+        
+        
+        
+    
 
 
     <Filmy>
@@ -138,11 +132,23 @@
 <Wszystkie>20</Wszystkie>
 </Oceny>
 <Gatunki>
-<Dramat>6</Dramat>
-<Komedia>8</Komedia>
-<Sci-Fi>6</Sci-Fi>
-<Wszystkie>20</Wszystkie>
+<Dramat>
+<Ilość>6</Ilość>
+<ŚredniaOcen>4.5</ŚredniaOcen>
+</Dramat>
+<Komedia>
+<Ilość>8</Ilość>
+<ŚredniaOcen>4.25</ŚredniaOcen>
+</Komedia>
+<Sci-Fi>
+<Ilość>6</Ilość>
+<ŚredniaOcen>4.5</ŚredniaOcen>
+</Sci-Fi>
+<Wszystkie>
+<Ilość>20</Ilość>
+<ŚredniaOcen>4.4</ŚredniaOcen>
+</Wszystkie>
 </Gatunki>
-<DataRaportu>2018-05-02T10:49:39+02:00</DataRaportu>
+<DataRaportu>2018-05-07T15:42:56+02:00</DataRaportu>
 </Statystyki>
 </BazaFilmów>

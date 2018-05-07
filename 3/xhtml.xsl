@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+                version="2.0"
                 xmlns="http://www.w3.org/1999/xhtml">
-    <xsl:output method="xml" version="1.0" encoding="utf-8"
+    <xsl:output method="xhtml" version="1.0" encoding="utf-8"
                 doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
 
     <xsl:template match="/">
         <xsl:element name="html">
-            <xsl:copy-of select="document('')/xsl:stylesheet/namespace::*[not(local-name() = 'xsl')]"/>
             <xsl:attribute name="xml:lang">pl</xsl:attribute>
             <xsl:attribute name="lang">pl</xsl:attribute>
 
@@ -63,53 +63,42 @@
             <xsl:attribute name="class">
                 <xsl:text>authors</xsl:text>
             </xsl:attribute>
-            <xsl:element name="p">
-                <xsl:attribute name="class">
-                    <xsl:text>authors-title</xsl:text>
-                </xsl:attribute>
-                <xsl:element name="a">
-                    <xsl:attribute name="name">
-                        <xsl:text>authors</xsl:text>
-                    </xsl:attribute>
-                    <xsl:text>Autorzy:&#x20;</xsl:text>
-                </xsl:element>
-            </xsl:element>
+            <xsl:text>Autorzy:&#x20;</xsl:text>
             <xsl:apply-templates/>
-
         </xsl:element>
     </xsl:template>
 
     <xsl:template match="Autor">
-        <xsl:element name="p">
+        <xsl:element name="div">
             <xsl:attribute name="class">
                 <xsl:text>author</xsl:text>
             </xsl:attribute>
             <xsl:value-of select="./Imię"/>
             <xsl:text>&#x20;</xsl:text>
             <xsl:value-of select="./Nazwisko"/>
-            <xsl:text>&#x20;(</xsl:text>
+            <xsl:text>, nr indeksu: </xsl:text>
             <xsl:value-of select="./Indeks"/>
-            <xsl:text>)</xsl:text>
-        </xsl:element>
-    </xsl:template>
-
-
-    <xsl:template match="Gatunki">
-        <xsl:element name="p">
-            <xsl:attribute name="class">
-                <xsl:text>department</xsl:text>
-            </xsl:attribute>
-
-
         </xsl:element>
     </xsl:template>
 
     <xsl:template match="Filmy">
         <xsl:element name="div">
+            <xsl:attribute name="class">
+                <xsl:text>films</xsl:text>
+            </xsl:attribute>
             <xsl:element name="table">
                 <xsl:attribute name="border">
-                    <xsl:text>0</xsl:text>
+                    <xsl:text>2</xsl:text>
                 </xsl:attribute>
+                <xsl:attribute name="align">
+                    <xsl:text>center</xsl:text>
+                </xsl:attribute>
+
+                <xsl:element name="caption">
+                    <xsl:element name="h2">
+                        <xsl:text>Wszystkie filmy</xsl:text>
+                    </xsl:element>
+                </xsl:element>
                 <xsl:element name="tr">
                     <xsl:element name="th">
                         <xsl:text>Tytuł</xsl:text>
@@ -125,6 +114,7 @@
                     </xsl:element>
                 </xsl:element>
                 <xsl:for-each select="./Film">
+                    <xsl:sort select="@Gatunek"/>
                     <xsl:element name="tr">
                         <xsl:element name="td">
                             <xsl:value-of select="Tytuł"/>
@@ -166,11 +156,21 @@
                         </xsl:element>
                         <xsl:element name="td">
                             <xsl:value-of select="Cena"/>
+                            <xsl:text>&#x20; zł</xsl:text>
                         </xsl:element>
 
                     </xsl:element>
                 </xsl:for-each>
             </xsl:element>
+        </xsl:element>
+    </xsl:template>
+
+    <xsl:template match="Statystyki">
+        <xsl:element name="div">
+            <xsl:attribute name="class">
+                <xsl:text>stats</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
         </xsl:element>
     </xsl:template>
 
@@ -188,14 +188,16 @@
     <xsl:template match="Statystyki/Oceny">
         <xsl:element name="div">
             <xsl:attribute name="class">
-                <xsl:text>raport</xsl:text>
+                <xsl:text>marks</xsl:text>
             </xsl:attribute>
             <xsl:element name="table">
                 <xsl:attribute name="border">
-                    <xsl:text>0</xsl:text>
+                    <xsl:text>1</xsl:text>
                 </xsl:attribute>
                 <xsl:element name="caption">
-                    <xsl:text>Oceny</xsl:text>
+                    <xsl:element name="h2">
+                        <xsl:text>Oceny</xsl:text>
+                    </xsl:element>
                 </xsl:element>
                 <xsl:element name="tr">
                     <xsl:element name="th">
@@ -261,14 +263,16 @@
     <xsl:template match="Statystyki/Gatunki">
         <xsl:element name="div">
             <xsl:attribute name="class">
-                <xsl:text>raport</xsl:text>
+                <xsl:text>genre</xsl:text>
             </xsl:attribute>
             <xsl:element name="table">
                 <xsl:attribute name="border">
-                    <xsl:text>0</xsl:text>
+                    <xsl:text>1</xsl:text>
                 </xsl:attribute>
                 <xsl:element name="caption">
-                    <xsl:text>Gatunki</xsl:text>
+                    <xsl:element name="h2">
+                        <xsl:text>Gatunki</xsl:text>
+                    </xsl:element>
                 </xsl:element>
                 <xsl:element name="tr">
                     <xsl:element name="th">
@@ -277,6 +281,9 @@
                     <xsl:element name="th">
                         <xsl:text>Ilość</xsl:text>
                     </xsl:element>
+                    <xsl:element name="th">
+                        <xsl:text>Średnia ocen</xsl:text>
+                    </xsl:element>
                 </xsl:element>
 
                 <xsl:element name="tr">
@@ -284,7 +291,10 @@
                         <xsl:text>Komedia</xsl:text>
                     </xsl:element>
                     <xsl:element name="td">
-                        <xsl:value-of select="Komedia"/>
+                        <xsl:value-of select="Komedia/Ilość"/>
+                    </xsl:element>
+                    <xsl:element name="td">
+                        <xsl:value-of select="Komedia/ŚredniaOcen"/>
                     </xsl:element>
                 </xsl:element>
                 <xsl:element name="tr">
@@ -292,7 +302,10 @@
                         <xsl:text>Dramat</xsl:text>
                     </xsl:element>
                     <xsl:element name="td">
-                        <xsl:value-of select="Dramat"/>
+                        <xsl:value-of select="Dramat/Ilość"/>
+                    </xsl:element>
+                    <xsl:element name="td">
+                        <xsl:value-of select="Dramat/ŚredniaOcen"/>
                     </xsl:element>
                 </xsl:element>
                 <xsl:element name="tr">
@@ -300,7 +313,10 @@
                         <xsl:text>Sci-Fi</xsl:text>
                     </xsl:element>
                     <xsl:element name="td">
-                        <xsl:value-of select="Sci-Fi"/>
+                        <xsl:value-of select="Sci-Fi/Ilość"/>
+                    </xsl:element>
+                    <xsl:element name="td">
+                        <xsl:value-of select="Sci-Fi/ŚredniaOcen"/>
                     </xsl:element>
                 </xsl:element>
                 <xsl:element name="tr">
@@ -308,11 +324,13 @@
                         <xsl:text>Wszystkie</xsl:text>
                     </xsl:element>
                     <xsl:element name="td">
-                        <xsl:value-of select="Wszystkie"/>
+                        <xsl:value-of select="Wszystkie/Ilość"/>
+                    </xsl:element>
+                    <xsl:element name="td">
+                        <xsl:value-of select="Wszystkie/ŚredniaOcen"/>
                     </xsl:element>
                 </xsl:element>
             </xsl:element>
         </xsl:element>
     </xsl:template>
-
 </xsl:stylesheet>

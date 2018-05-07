@@ -39,16 +39,40 @@
                 </Oceny>
                 <Gatunki>
                     <Dramat>
-                        <xsl:value-of select="count(//Filmy/Film[@IdGatunku='Dr'])"/>
+                        <xsl:variable name="DrCount" select="count(//Filmy/Film[@IdGatunku='Dr'])"/>
+                        <Ilość>
+                            <xsl:value-of select="$DrCount"/>
+                        </Ilość>
+                        <ŚredniaOcen>
+                            <xsl:value-of select="sum(//Filmy/Film[@IdGatunku='Dr']/@Ocena) div $DrCount"/>
+                        </ŚredniaOcen>
                     </Dramat>
                     <Komedia>
-                        <xsl:value-of select="count(//Filmy/Film[@IdGatunku='Ko'])"/>
+                        <xsl:variable name="KoCount" select="count(//Filmy/Film[@IdGatunku='Ko'])"/>
+                        <Ilość>
+                            <xsl:value-of select="$KoCount"/>
+                        </Ilość>
+                        <ŚredniaOcen>
+                            <xsl:value-of select="sum(//Filmy/Film[@IdGatunku='Ko']/@Ocena) div $KoCount"/>
+                        </ŚredniaOcen>
                     </Komedia>
                     <Sci-Fi>
-                        <xsl:value-of select="count(//Filmy/Film[@IdGatunku='SF'])"/>
+                        <xsl:variable name="SFCount" select="count(//Filmy/Film[@IdGatunku='SF'])"/>
+                        <Ilość>
+                            <xsl:value-of select="$SFCount"/>
+                        </Ilość>
+                        <ŚredniaOcen>
+                            <xsl:value-of select="sum(//Filmy/Film[@IdGatunku='SF']/@Ocena) div $SFCount"/>
+                        </ŚredniaOcen>
                     </Sci-Fi>
                     <Wszystkie>
-                        <xsl:value-of select="count(//Filmy/Film)"/>
+                        <xsl:variable name="FilmsCount" select="count(//Filmy/Film)"/>
+                        <Ilość>
+                            <xsl:value-of select="$FilmsCount"/>
+                        </Ilość>
+                        <ŚredniaOcen>
+                            <xsl:value-of select="sum(//Filmy/Film/@Ocena) div $FilmsCount"/>
+                        </ŚredniaOcen>
                     </Wszystkie>
                 </Gatunki>
                 <DataRaportu>
@@ -78,19 +102,6 @@
         </xsl:element>
     </xsl:template>
 
-    <xsl:template match="//Gatunki">
-        <xsl:element name="Gatunki">
-            <xsl:apply-templates select="Gatunek"/>
-        </xsl:element>
-    </xsl:template>
-
-    <xsl:template match="//Gatunek">
-        <xsl:element name="Gatunek">
-            <xsl:element name="Nazwa">
-                <xsl:value-of select="./@Nazwa"/>
-            </xsl:element>
-        </xsl:element>
-    </xsl:template>
 
     <!--    <xsl:template match="//Film">
             <xsl:element name="Gatunek">
@@ -114,7 +125,7 @@
                 <xsl:value-of select="$WybranyGatunek/@Nazwa"/>
             </xsl:attribute>
             <xsl:element name="Tytuł">
-                <xsl:value-of select="Tytuł"/>
+            <xsl:value-of select="Tytuł"/>
             </xsl:element>
             <xsl:element name="Ocena">
                 <xsl:value-of select="./@Ocena"/>
