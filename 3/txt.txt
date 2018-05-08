@@ -134,4 +134,4 @@ Sci-Fi:			6			4.5
 WSZYSTKIE:		20			4.4
 
 
-Raport wygenerowano dnia 2018-05-07 o godzinie 20:23:55
+Raport wygenerowano dnia 2018-05-08 o godzinie 17:19:09
