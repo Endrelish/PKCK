@@ -9,7 +9,7 @@ div.authors {
 
 
 div.author {
-    font-family: Calibra;
+    font-family: Calibra, serif;
     font-size: 20px;
 }
 table td:first-child {
@@ -51,7 +51,7 @@ table {
 
 div.date {
     text-align: center;
-    font-family: Tahoma;
+    font-family: Tahoma, serif;
 
 }
 
