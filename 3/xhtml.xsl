@@ -87,9 +87,7 @@
                 <xsl:text>films</xsl:text>
             </xsl:attribute>
             <xsl:element name="table">
-                <xsl:attribute name="border">
-                    <xsl:text>2</xsl:text>
-                </xsl:attribute>
+
                 <xsl:attribute name="align">
                     <xsl:text>center</xsl:text>
                 </xsl:attribute>
@@ -191,9 +189,6 @@
                 <xsl:text>marks</xsl:text>
             </xsl:attribute>
             <xsl:element name="table">
-                <xsl:attribute name="border">
-                    <xsl:text>1</xsl:text>
-                </xsl:attribute>
                 <xsl:element name="caption">
                     <xsl:element name="h2">
                         <xsl:text>Oceny</xsl:text>
@@ -266,9 +261,6 @@
                 <xsl:text>genre</xsl:text>
             </xsl:attribute>
             <xsl:element name="table">
-                <xsl:attribute name="border">
-                    <xsl:text>1</xsl:text>
-                </xsl:attribute>
                 <xsl:element name="caption">
                     <xsl:element name="h2">
                         <xsl:text>Gatunki</xsl:text>
