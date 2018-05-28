@@ -88,14 +88,11 @@
             </xsl:attribute>
             <xsl:element name="table">
 
-                <xsl:attribute name="align">
-                    <xsl:text>center</xsl:text>
-                </xsl:attribute>
 
                 <xsl:element name="caption">
-                    <xsl:element name="h2">
+
                         <xsl:text>Wszystkie filmy</xsl:text>
-                    </xsl:element>
+
                 </xsl:element>
                 <xsl:element name="tr">
                     <xsl:element name="th">
@@ -190,9 +187,9 @@
             </xsl:attribute>
             <xsl:element name="table">
                 <xsl:element name="caption">
-                    <xsl:element name="h2">
+
                         <xsl:text>Oceny</xsl:text>
-                    </xsl:element>
+
                 </xsl:element>
                 <xsl:element name="tr">
                     <xsl:element name="th">
@@ -262,9 +259,9 @@
             </xsl:attribute>
             <xsl:element name="table">
                 <xsl:element name="caption">
-                    <xsl:element name="h2">
+
                         <xsl:text>Gatunki</xsl:text>
-                    </xsl:element>
+
                 </xsl:element>
                 <xsl:element name="tr">
                     <xsl:element name="th">

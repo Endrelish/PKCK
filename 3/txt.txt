@@ -1,7 +1,7 @@
 
     	AUTORZY:
-Bartłomiej Ciach		(203860)
-Paweł Purgat		(203975)
+Bartłomiej Ciach   (203860)
+Paweł Purgat       (203975)
 
 
 
@@ -12,106 +12,27 @@ Paweł Purgat		(203975)
     
 
 
-    		Zielona Mila
-Gatunek:		Dramat
-Ocena:			5
-Cena:			12.99
-
-		Skazani na Shawshank
-Gatunek:		Dramat
-Ocena:			4
-Cena:			13.99
-
-		Taksówkarz
-Gatunek:		Dramat
-Ocena:			5
-Cena:			14.99
-
-		Babel
-Gatunek:		Dramat
-Ocena:			4
-Cena:			15.99
-
-		Życie za życie
-Gatunek:		Dramat
-Ocena:			5
-Cena:			16.99
-
-		Wszyscy jesteśmy Chrystusami
-Gatunek:		Dramat
-Ocena:			4
-Cena:			15.99
-
-		Avatar
-Gatunek:		Sci-Fi
-Ocena:			5
-Cena:			14.99
-
-		Terminator
-Gatunek:		Sci-Fi
-Ocena:			4
-Cena:			13.99
-
-		Bruce Wszechmogący
-Gatunek:		Komedia
-Ocena:			5
-Cena:			12.99
-
-		Interstellar
-Gatunek:		Sci-Fi
-Ocena:			4
-Cena:			11.99
-
-		Iron Man
-Gatunek:		Sci-Fi
-Ocena:			5
-Cena:			10.99
-
-		Avengers
-Gatunek:		Sci-Fi
-Ocena:			5
-Cena:			9.99
-
-		Marsjanin
-Gatunek:		Sci-Fi
-Ocena:			4
-Cena:			9.99
-
-		Killer
-Gatunek:		Komedia
-Ocena:			5
-Cena:			10.99
-
-		Chłopaki nie płaczą
-Gatunek:		Komedia
-Ocena:			5
-Cena:			12.99
-
-		Miś
-Gatunek:		Komedia
-Ocena:			4
-Cena:			14.99
-
-		To właśnie miłość
-Gatunek:		Komedia
-Ocena:			5
-Cena:			16.99
-
-		Kac Vegas
-Gatunek:		Komedia
-Ocena:			3
-Cena:			15.99
-
-		Głupi i głupszy
-Gatunek:		Komedia
-Ocena:			3
-Cena:			14.99
-
-		Jak rozpętałem drugą wojnę światową
-Gatunek:		Komedia
-Ocena:			4
-Cena:			12.99
-
+    Tytuł									Gatunek				Ocena		Cena
+Zielona Mila                                Dramat				5			12.99						
+Skazani na Shawshank                        Dramat				4			13.99						
+Taksówkarz                                  Dramat				5			14.99						
+Babel                                       Dramat				4			15.99						
+Życie za życie                              Dramat				5			16.99						
+Wszyscy jesteśmy Chrystusami                Dramat				4			15.99						
+Avatar                                      Sci-Fi				5			14.99						
+Terminator                                  Sci-Fi				4			13.99						
+Bruce Wszechmogący                          Komedia				5			12.99						
+Interstellar                                Sci-Fi				4			11.99						
+Iron Man                                    Sci-Fi				5			10.99						
+Avengers                                    Sci-Fi				5			9.99						
+Marsjanin                                   Sci-Fi				4			9.99						
+Killer                                      Komedia				5			10.99						
+Chłopaki nie płaczą                         Komedia				5			12.99						
+Miś                                         Komedia				4			14.99						
+To właśnie miłość                           Komedia				5			16.99						
+Kac Vegas                                   Komedia				3			15.99						
+Głupi i głupszy                             Komedia				3			14.99						
+Jak rozpętałem drugą wojnę światową         Komedia				4			12.99						
 
    
 
@@ -134,4 +55,4 @@ Sci-Fi:			6			4.5
 WSZYSTKIE:		20			4.4
 
 
-Raport wygenerowano dnia 2018-05-08 o godzinie 17:19:09
+Raport wygenerowano dnia 2018-05-11 o godzinie 10:40:26

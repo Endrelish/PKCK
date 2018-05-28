@@ -8,23 +8,26 @@
     </xsl:template>
 
     <xsl:template match="Autor">
-        <xsl:value-of select="Imię" />
-        <xsl:text> </xsl:text>
-        <xsl:value-of select="Nazwisko" />
-        <xsl:text>&#x9;&#x9;(</xsl:text>
+        <xsl:variable name="label" select="concat(Imię,' ',Nazwisko,'&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;')"/>
+        <xsl:value-of select="substring($label,0,20)"/>
+        <xsl:text>(</xsl:text>
         <xsl:value-of select="Indeks" />
         <xsl:text>)&#xA;</xsl:text>
     </xsl:template>
 
     <xsl:template match="Filmy">
+        <xsl:text>Tytuł&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;Gatunek&#x9;&#x9;&#x9;&#x9;Ocena&#x9;&#x9;Cena&#xA;</xsl:text>
+
+
         <xsl:apply-templates select="Film"/>
     </xsl:template>
 
     <xsl:template match="Film">
-        <xsl:value-of select="concat('&#x9;&#x9;',Tytuł,'&#xA;')" />
-        <xsl:value-of select="concat('Gatunek:&#x9;&#x9;',@Gatunek,'&#xA;')" />
-        <xsl:value-of select="concat('Ocena:&#x9;&#x9;&#x9;',Ocena,'&#xA;')" />
-        <xsl:value-of select="concat('Cena:&#x9;&#x9;&#x9;',Cena,'&#xA;&#xA;')" />
+        <xsl:variable name="label" select="concat(Tytuł,'&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;')"/>
+        <xsl:value-of select="substring($label,0,45)" />
+        <xsl:value-of select="concat(@Gatunek,  '&#x9;&#x9;&#x9;&#x9;')" />
+        <xsl:value-of select="concat(Ocena,     '&#x9;&#x9;&#x9;')" />
+        <xsl:value-of select="concat(Cena,      '&#x9;&#x9;&#x9;&#x9;&#x9;&#x9;&#xA;')" />
     </xsl:template>
 
     <xsl:template match="Statystyki">
