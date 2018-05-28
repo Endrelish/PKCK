@@ -120,7 +120,7 @@
             </Reżyser>
             <Cena>14.99</Cena>
         </Film>
-        <Film IdGatunku="SF" Ocena="4">
+        <Film IdGatunku="SF" Ocena="5">
             <Tytuł>Terminator</Tytuł>
             <OryginalnyTytuł>The Terminator</OryginalnyTytuł>
             <DataPremiery>1984-12-25</DataPremiery>
@@ -162,7 +162,7 @@
             </Reżyser>
             <Cena>11.99</Cena>
         </Film>
-        <Film IdGatunku="SF" Ocena="5">
+        <Film IdGatunku="SF" Ocena="2">
             <Tytuł>Iron Man</Tytuł>
             <DataPremiery>2008-12-25</DataPremiery>
             <Kraje>
@@ -174,7 +174,7 @@
             </Reżyser>
             <Cena>10.99</Cena>
         </Film>
-        <Film IdGatunku="SF" Ocena="5">
+        <Film IdGatunku="SF" Ocena="2">
             <Tytuł>Avengers</Tytuł>
             <OryginalnyTytuł>The Avengers</OryginalnyTytuł>
             <DataPremiery>2012-12-25</DataPremiery>
@@ -187,7 +187,7 @@
             </Reżyser>
             <Cena>9.99</Cena>
         </Film>
-        <Film IdGatunku="SF" Ocena="4">
+        <Film IdGatunku="SF" Ocena="3">
             <Tytuł>Marsjanin</Tytuł>
             <OryginalnyTytuł>The Martian</OryginalnyTytuł>
             <DataPremiery>2015-12-25</DataPremiery>
