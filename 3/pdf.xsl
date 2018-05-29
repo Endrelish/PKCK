@@ -11,7 +11,7 @@
             <fo:layout-master-set>
                 <fo:simple-page-master master-name="BazaFilmów"
                                        page-height="297mm" page-width="210mm"
-                                       margin-top="20" margin-bottom="40" margin-left="50" margin-right="50">
+                                       margin-top="25" margin-bottom="45" margin-left="50" margin-right="50">
                     <fo:region-body margin="30,10"/>
                     <fo:region-before extent="5"/>
                     <fo:region-after extent="5"/>
@@ -24,12 +24,7 @@
                 <fo:static-content flow-name="xsl-region-before">
                     <fo:block text-align="center" font-family="Calibra" font-size="10px">
                         <xsl:text>Baza Filmów</xsl:text>
-                        <fo:block text-align="center" font-family="Calibra" font-size="10px">
-                            <xsl:text>Raport wygenerowano dnia </xsl:text>
-                            <xsl:value-of select="substring(//Statystyki/DataRaportu,0,11)"/>
-                            <xsl:text> o godzinie </xsl:text>
-                            <xsl:value-of select="substring(//Statystyki/DataRaportu,12,8)"/>
-                        </fo:block>
+                        BazaFilmów
                     </fo:block>
                 </fo:static-content>
                 <fo:static-content flow-name="xsl-region-after">
@@ -67,7 +62,13 @@
                 <xsl:text>&#xD;&#xA;</xsl:text>
             </fo:block>
             <fo:block>
+                <fo:block font-size="15px">
+                    <xsl:text>Ilość gatunków i średnia ocen:</xsl:text>
+                </fo:block>
                 <xsl:apply-templates select="Gatunki"/>
+                <fo:block font-size="15px">
+                    <xsl:text>Ilość ocen</xsl:text>
+                </fo:block>
                 <xsl:apply-templates select="Oceny"/>
             </fo:block>
         </fo:block>
@@ -95,7 +96,7 @@
     </xsl:template>-->
 
     <xsl:template match="Statystyki/Gatunki">
-        <fo:block font-size="10px" text-align="left" font-family="Calibra">
+        <fo:block font-size="16px" text-align="left" font-family="Calibra">
             <fo:table border="solid black" width="50%" >
 
                 <fo:table-header>
@@ -187,7 +188,7 @@
 
 
     <xsl:template match="Statystyki/Oceny">
-        <fo:block font-size="10px" text-align="left" font-family="Calibra">
+        <fo:block font-size="16px" text-align="left" font-family="Calibra">
             <fo:table border="solid black" width="50%">
                 <fo:table-header>
                     <fo:table-row>
@@ -279,7 +280,7 @@
 
 
     <xsl:template match="Filmy">
-        <fo:block font-size="10px" 	text-align="left" font-family="Calibra">
+        <fo:block font-size="16px" 	text-align="left" font-family="Calibra">
             <fo:block>
                 <fo:table border="solid black" width="100%">
 

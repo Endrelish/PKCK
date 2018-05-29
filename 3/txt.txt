@@ -20,12 +20,12 @@ Babel                                       Dramat				4			15.99
 Życie za życie                              Dramat				5			16.99						
 Wszyscy jesteśmy Chrystusami                Dramat				4			15.99						
 Avatar                                      Sci-Fi				5			14.99						
-Terminator                                  Sci-Fi				4			13.99						
+Terminator                                  Sci-Fi				5			13.99						
 Bruce Wszechmogący                          Komedia				5			12.99						
 Interstellar                                Sci-Fi				4			11.99						
-Iron Man                                    Sci-Fi				5			10.99						
-Avengers                                    Sci-Fi				5			9.99						
-Marsjanin                                   Sci-Fi				4			9.99						
+Iron Man                                    Sci-Fi				2			10.99						
+Avengers                                    Sci-Fi				2			9.99						
+Marsjanin                                   Sci-Fi				3			9.99						
 Killer                                      Komedia				5			10.99						
 Chłopaki nie płaczą                         Komedia				5			12.99						
 Miś                                         Komedia				4			14.99						
@@ -39,10 +39,10 @@ Jak rozpętałem drugą wojnę światową         Komedia				4			12.99
 Statystyki:
 OCENA			ILOŚĆ
 1:				0
-2:				0
-3:				2
-4:				8
-5:				10
+2:				2
+3:				3
+4:				6
+5:				9
 ----------------------------------------
 WSZYSTKIE:		20
 
@@ -50,9 +50,9 @@ WSZYSTKIE:		20
 GATUNEK			ILOŚĆ		ŚREDNIA
 Komedia:		8			4.25
 Dramat:			6			4.5
-Sci-Fi:			6			4.5
+Sci-Fi:			6			3.5
 ----------------------------------------
-WSZYSTKIE:		20			4.4
+WSZYSTKIE:		20			4.1
 
 
-Raport wygenerowano dnia 2018-05-11 o godzinie 10:40:26
+Raport wygenerowano dnia 2018-05-28 o godzinie 22:34:29
