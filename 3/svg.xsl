@@ -25,8 +25,8 @@
 
             <a xlink:href="pomocniczy.xhtml">
                 <svg:g class="btn" cursor="pointer">
-                    <svg:rect x="712" y="15" width="70" height="20" style="fill:rgb(130,67,0)" stroke="black"/>
-                    <svg:text x="724" y="30" fill="burlywood" font-size="15">Raport</svg:text>
+                    <svg:rect x="712" y="15" width="85" height="30" style="fill:rgb(130,67,0)" stroke="black"/>
+                    <svg:text x="735" y="35" fill="burlywood" font-size="15">Raport</svg:text>
                 </svg:g>
             </a>
 
@@ -72,10 +72,10 @@
 
                     }]]>
             </script>
-            <xsl:apply-templates/>
+            <xsl:apply-templates select="BazaFilmów/Statystyki"/>
         </svg:svg>
     </xsl:template>
-    
+
 
     <xsl:template match="Statystyki">
         <xsl:apply-templates/>
@@ -84,7 +84,7 @@
 
     <xsl:template match="Oceny">
         <svg:rect x="100" y="50" width="650" height="300" fill="orange" stroke="black"/>
-        <svg:text x="50%" y="80" font-size="16" fill="#824300" font-weight="bold" text-anchor="middle">Oceny</svg:text>
+        <svg:text x="50%" y="80" font-size="16" fill="#824300" font-weight="bold" text-anchor="middle">Ilość poszczególnych ocen</svg:text>
         <svg:text x="245" y="320" font-size="16" fill="chocolate" font-weight="bold">1</svg:text>
         <svg:text x="345" y="320" font-size="16" fill="chocolate" font-weight="bold">2</svg:text>
         <svg:text x="445" y="320" font-size="16" fill="chocolate" font-weight="bold">3</svg:text>
@@ -253,7 +253,7 @@
     </xsl:template>
     <xsl:template match="Gatunki">
         <svg:rect x="100" y="350" width="650" height="300" fill="orange" stroke="black"/>
-        <svg:text x="50%" y="380" font-size="16" fill="#824300" font-weight="bold" text-anchor="middle">Gatunki
+        <svg:text x="50%" y="380" font-size="16" fill="#824300" font-weight="bold" text-anchor="middle">Ilość poszczególnych gatunków
         </svg:text>
         <svg:text x="225" y="620" font-size="16" fill="chocolate" font-weight="bold">Dramat</svg:text>
         <svg:text x="425" y="620" font-size="16" fill="chocolate" font-weight="bold">Komedia</svg:text>
