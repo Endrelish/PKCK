@@ -10,12 +10,6 @@
         <svg:svg width="800" height="1000" font-family="Calibri">
             <svg:desc>Dane o filmach</svg:desc>
             <svg:title>Baza Filmów</svg:title>
-            <defs>
-                <linearGradient id="grad1" x1="0%" y1="0%" x2="0%" y2="100%">
-                    <stop offset="0%" style="stop-color:rgb(255,240,220);stop-opacity:1"/>
-                    <stop offset="100%" style="stop-color:rgb(235,220,200);stop-opacity:1"/>
-                </linearGradient>
-            </defs>
 
             <svg:rect x="0" y="0" width="100%" height="100%" fill="#ffdb8c"/>
 
@@ -151,7 +145,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startOceny.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">300</xsl:attribute>
                     <xsl:attribute name="to">
@@ -174,7 +168,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startOceny.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">300</xsl:attribute>
                     <xsl:attribute name="to">
@@ -196,7 +190,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startOceny.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">300</xsl:attribute>
                     <xsl:attribute name="to">
@@ -219,7 +213,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startOceny.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">300</xsl:attribute>
                     <xsl:attribute name="to">
@@ -241,7 +235,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startOceny.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">300</xsl:attribute>
                     <xsl:attribute name="to">
@@ -316,7 +310,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startGatunki.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">600</xsl:attribute>
                     <xsl:attribute name="to">
@@ -339,7 +333,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startGatunki.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">600</xsl:attribute>
                     <xsl:attribute name="to">
@@ -361,7 +355,7 @@
                     <xsl:attribute name="attributeName">y2</xsl:attribute>
                     <xsl:attribute name="attributeType">XML</xsl:attribute>
                     <xsl:attribute name="begin">startGatunki.click</xsl:attribute>
-                    <xsl:attribute name="dur">5s</xsl:attribute>
+                    <xsl:attribute name="dur">3s</xsl:attribute>
                     <xsl:attribute name="fill">freeze</xsl:attribute>
                     <xsl:attribute name="from">600</xsl:attribute>
                     <xsl:attribute name="to">
