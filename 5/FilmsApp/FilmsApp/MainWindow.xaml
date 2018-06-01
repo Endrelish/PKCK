@@ -4,9 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FilmsApp"
+        xmlns:view="clr-namespace:FilmsApp.View"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <ComboBox Margin="5" ItemsSource="{Binding Path=Elements}" 
+                  SelectedItem="{Binding Path=SelectedElement, Mode=TwoWay}"
+        />
+
+
+        <view:AllFilms Visibility="{Binding Path=VFilms}"  HorizontalAlignment="Left" Height="278" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="517"/>
+        <!--<view:AddingFilms Visibility="{Binding Path=VAddFilm}"  HorizontalAlignment="Left" Height="278" Grid.Row="1" VerticalAlignment="Top" Width="517" Margin="0,10,0,0"/>-->
     </Grid>
 </Window>

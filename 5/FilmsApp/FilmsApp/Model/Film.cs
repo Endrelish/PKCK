@@ -21,7 +21,7 @@ namespace FilmsApp.Model
         [XmlElement(ElementName = "Reżyser", Namespace = "http://www.example.org/baza")]
         public Rezyser Rezyser { get; set; }
         [XmlElement(ElementName = "Cena", Namespace = "http://www.example.org/baza")]
-        public string Cena { get; set; }
+        public double Cena { get; set; }
         [XmlAttribute(AttributeName = "IdGatunku")]
         public string IdGatunku { get; set; }
         [XmlAttribute(AttributeName = "Ocena")]

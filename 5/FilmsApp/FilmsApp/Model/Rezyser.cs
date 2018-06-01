@@ -10,9 +10,14 @@ namespace FilmsApp.Model
     [XmlRoot(ElementName = "Reżyser", Namespace = "http://www.example.org/baza")]
     public class Rezyser
     {
-        [XmlElement(ElementName = "Imie", Namespace = "http://www.example.org/baza")]
-        public List<string> Imię { get; set; }
+        [XmlElement(ElementName = "Imię", Namespace = "http://www.example.org/baza")]
+        public List<string> Imie { get; set; }
         [XmlElement(ElementName = "Nazwisko", Namespace = "http://www.example.org/baza")]
         public string Nazwisko { get; set; }
+
+        public override string ToString()
+        {
+            return Imie.First()+ " " + Nazwisko;
+        }
     }
 }
