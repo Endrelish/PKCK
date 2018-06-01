@@ -13,9 +13,9 @@ namespace FilmsApp.Model
         [XmlElement(ElementName = "Tytuł", Namespace = "http://www.example.org/baza")]
         public string Tytul { get; set; }
         [XmlElement(ElementName = "OryginalnyTytuł", Namespace = "http://www.example.org/baza")]
-        public string OryginalnyTytuł { get; set; }
+        public string OryginalnyTytul { get; set; }
         [XmlElement(ElementName = "DataPremiery", Namespace = "http://www.example.org/baza")]
-        public string DataPremiery { get; set; }
+        public DateTime DataPremiery { get; set; }
         [XmlElement(ElementName = "Kraje", Namespace = "http://www.example.org/baza")]
         public Kraje Kraje { get; set; }
         [XmlElement(ElementName = "Reżyser", Namespace = "http://www.example.org/baza")]
@@ -25,6 +25,6 @@ namespace FilmsApp.Model
         [XmlAttribute(AttributeName = "IdGatunku")]
         public string IdGatunku { get; set; }
         [XmlAttribute(AttributeName = "Ocena")]
-        public string Ocena { get; set; }
+        public int Ocena { get; set; }
     }
 }

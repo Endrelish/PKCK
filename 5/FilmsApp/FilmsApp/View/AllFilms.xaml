@@ -28,10 +28,35 @@
                         <ColumnDefinition Width="auto"/>
                         <ColumnDefinition Width="*" />
                     </Grid.ColumnDefinitions>
-                    <TextBlock Text="Tytuł" Grid.Row="2"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding Tytul,Mode=TwoWay}" Margin="0,0,-57,0" />
-                    <TextBlock  Grid.Row="3" Text="Cena"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock Text="Tytuł" Grid.Row="0"/>
+                    <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Tytul,Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="2" Text="Oryginalny Tytuł"/>
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding OryginalnyTytul, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="3" Text="Data Premiery"/>
+                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="4" Text="Kraj produkcji:"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=Kraje.Kraj}" >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <!-- DataContext will be ListOfMessages[0], [1], ..., [n] -->
+                                <TextBox Text="{Binding .}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <TextBlock  Grid.Row="5" Text="Reżyser"/>
+                    <ItemsControl Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=Rezyser.Imie}" >
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <TextBox Text="{Binding .}" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="7" Text="Cena"/>
+                    <TextBox Grid.Column="1" Grid.Row="7" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="8" Text="Ocena"/>
+                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,-57,0" />
+
 
                 </Grid>
             </Grid>
