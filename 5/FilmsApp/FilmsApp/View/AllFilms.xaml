@@ -33,7 +33,7 @@
                     <TextBlock  Grid.Row="2" Text="Oryginalny Tytuł"/>
                     <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding OryginalnyTytul, Mode=TwoWay}" Margin="0,0,-57,0" />
                     <TextBlock  Grid.Row="3" Text="Data Premiery"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay, StringFormat={}{0:yyyy-MM-dd}}" Margin="0,0,-57,0" />
                     <TextBlock  Grid.Row="4" Text="Kraj produkcji:"/>
                     <ItemsControl Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=Kraje.Kraj}" >
                         <ItemsControl.ItemTemplate>

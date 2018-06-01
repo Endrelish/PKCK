@@ -33,6 +33,7 @@ namespace FilmsApp
                 {
                     bazaFilmow = (BazaFilmow)Serializer.Deserialize(textReader);
                     textReader.Close();
+                    
                 }
             }
             else

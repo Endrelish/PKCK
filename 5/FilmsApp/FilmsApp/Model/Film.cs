@@ -26,5 +26,20 @@ namespace FilmsApp.Model
         public string IdGatunku { get; set; }
         [XmlAttribute(AttributeName = "Ocena")]
         public int Ocena { get; set; }
+
+
+
+        [XmlIgnore]
+        public Gatunek Gatunek
+        {
+            get { return ListOfGatunek.FirstOrDefault(f => f.Id == IdGatunku); }
+            set
+            {
+                this.IdGatunku = ListOfGatunek.FirstOrDefault(w => w.Nazwa == value.Nazwa).Id;
+            }
+        }
+
+        [XmlIgnore]
+        public List<Gatunek> ListOfGatunek { get; set; }
     }
 }
