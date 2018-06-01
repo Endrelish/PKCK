@@ -11,7 +11,7 @@ namespace FilmsApp.Model
     public class Rezyser
     {
         [XmlElement(ElementName = "Imię", Namespace = "http://www.example.org/baza")]
-        public List<string> Imie { get; set; }
+        public List<string> Imie { get; set; } = new List<string>();
         [XmlElement(ElementName = "Nazwisko", Namespace = "http://www.example.org/baza")]
         public string Nazwisko { get; set; }
 

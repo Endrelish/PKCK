@@ -11,6 +11,6 @@ namespace FilmsApp.Model
     public class Kraje
     {
         [XmlElement(ElementName = "Kraj", Namespace = "http://www.example.org/baza")]
-        public List<string> Kraj { get; set; }
+        public List<string> Kraj { get; set; } = new List<string>();
     }
 }

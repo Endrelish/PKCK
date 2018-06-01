@@ -17,9 +17,9 @@ namespace FilmsApp.Model
         [XmlElement(ElementName = "DataPremiery", Namespace = "http://www.example.org/baza")]
         public DateTime DataPremiery { get; set; }
         [XmlElement(ElementName = "Kraje", Namespace = "http://www.example.org/baza")]
-        public Kraje Kraje { get; set; }
+        public Kraje Kraje { get; set; } = new Kraje();
         [XmlElement(ElementName = "Reżyser", Namespace = "http://www.example.org/baza")]
-        public Rezyser Rezyser { get; set; }
+        public Rezyser Rezyser { get; set; } = new Rezyser();
         [XmlElement(ElementName = "Cena", Namespace = "http://www.example.org/baza")]
         public double Cena { get; set; }
         [XmlAttribute(AttributeName = "IdGatunku")]
