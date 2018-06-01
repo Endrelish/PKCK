@@ -68,6 +68,5 @@
         </Grid.RowDefinitions>
         <ContentControl Content="{Binding Path=NewFilm}" Margin="0,0,-199,0"
             ContentControl.ContentTemplate="{StaticResource FilmTemplate}"/>
-        <Button  x:Name="buttonAddFilm" Content="Add Product" Command="{Binding Path=Click_AddFilm}" Height="20" Width="75" Margin="127,198,-123,133"/>
     </Grid>
 </UserControl>

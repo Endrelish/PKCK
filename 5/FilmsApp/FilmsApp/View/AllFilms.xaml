@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:FilmsApp.View"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             Height="750" Width="900">
     <UserControl.Resources>
 
 
@@ -90,8 +90,9 @@
             ContentControl.ContentTemplate="{StaticResource FilmTemplate}">
 
         </ContentControl>
-        <Button Grid.Column="1" x:Name="buttonSave" Content="Zapisz film" Command="{Binding Path=Click_SaveFilm}" Height="20" Width="75" Margin="127,198,-123,133"/>
-
+        <Button Grid.Column="1" x:Name="buttonSave" Content="Zapisz film" Command="{Binding Path=Click_SaveFilm}" Height="20" Width="75" Margin="127,0,-123,133"/>
+        <Button Grid.Column="1" x:Name="buttonGenSVG" Content="Generuj SVG" Command="{Binding Path=Click_GenerateSvg}" Height="20" Width="80" Margin="0,300,-123,133"/>
+        <Button Grid.Column="1" x:Name="buttonGenXHTML" Content="Generuj XHTML" Command="{Binding Path=Click_GenerateXhtml}" Height="20" Width="80" Margin="254,300,-123,133"/>
 
     </Grid>
 

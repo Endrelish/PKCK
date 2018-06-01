@@ -1,0 +1,77 @@
+body{
+    background-color: #ffdb8c;
+    margin: 50px 50px 50px 50px;
+}
+
+div.authors {
+    text-align: center;
+}
+
+div.films{
+    text-align: center;
+    display: block;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+div.author {
+    font-family: Calibra, serif;
+    font-size: 20px;
+}
+table td:first-child {
+    color: firebrick;
+    font-style: italic;
+    font-weight: bold;
+}
+table tr:nth-child(even) {
+    background-color: burlywood;
+}
+table tr:nth-child(odd) {
+    background-color: orange;
+}
+
+table tr:hover, table td:first-child:hover  {
+    background-color: chocolate;
+    color: burlywood;
+}
+
+table tr {
+    color: firebrick;
+}
+table th {
+    background-color: #824300;
+    color:  burlywood;
+}
+
+
+table, table th, table td, table tr {
+    border-radius: 5%;
+    border: dotted;
+    text-align: center;
+    font-size: 125%;
+}
+
+table {
+    margin-bottom: 50px;
+}
+
+div.date {
+    text-align: center;
+    font-family: Tahoma, serif;
+
+}
+
+div.stats {
+    display: block;
+    text-align: center;
+}
+
+div.marks {
+    display: inline-block;
+    text-align: center;
+    margin-right: 10%;
+}
+
+div.genre {
+    display: inline-block;
+    text-align: center;
+}
