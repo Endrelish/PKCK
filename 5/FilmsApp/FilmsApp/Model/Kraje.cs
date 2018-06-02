@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,5 +13,12 @@ namespace FilmsApp.Model
     {
         [XmlElement(ElementName = "Kraj", Namespace = "http://www.example.org/baza")]
         public List<string> Kraj { get; set; } = new List<string>();
+
+        public override string ToString()
+        {
+            string kraje = "";
+            Kraj.ForEach(x => kraje+=x+" ");
+            return kraje;
+        }
     }
 }

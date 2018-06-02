@@ -8,10 +8,11 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
 
-        <DataTemplate x:Key="FilmTemplate">
-            <Grid Grid.Column="0">
-                <Grid Grid.Row="1" Grid.Column="1">
+        <DataTemplate x:Key="AddFilmTemplate">
+            <Grid>
+                <Grid>
                     <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
@@ -25,48 +26,49 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="auto" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Tytuł" Grid.Row="0"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Tytul,Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Tytul,Mode=TwoWay}" Width="250" Margin="0,0,-57,0" />
                     <TextBlock  Grid.Row="2" Text="Oryginalny Tytuł"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding OryginalnyTytul, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding OryginalnyTytul, Mode=TwoWay}" Width="250" Margin="0,0,-57,0" />
                     <TextBlock  Grid.Row="3" Text="Data Premiery"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay, StringFormat={}{0:yyyy-MM-dd}}" Width="250" Margin="0,0,-57,0" />
                     <TextBlock  Grid.Row="4" Text="Kraj produkcji:"/>
-                    <ItemsControl Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=Kraje.Kraj}" >
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <!-- DataContext will be ListOfMessages[0], [1], ..., [n] -->
-                                <TextBox Text="{Binding .}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    <TextBlock  Grid.Row="5" Text="Reżyser"/>
-                    <ItemsControl Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=Rezyser.Imie}" >
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding .}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
-                    <TextBlock  Grid.Row="7" Text="Cena"/>
-                    <TextBox Grid.Column="1" Grid.Row="7" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,-57,0" />
-                    <TextBlock  Grid.Row="8" Text="Ocena"/>
-                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,-57,0" />
 
 
-                </Grid>
+                    <TextBlock  Grid.Row="5" Text="Cena"/>
+                    <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Cena, Mode=TwoWay}" Width="250" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="6" Text="Ocena"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="7" Text="Gatunek"/>
+                    <ComboBox   Grid.Column="1" Grid.Row="7"  Margin="0 0 25 10" HorizontalContentAlignment="Left" 
+                                ItemsSource="{Binding ListOfGatunek}" SelectedItem="{Binding Gatunek}" />
+                    <TextBlock  Grid.Row="8" Text="Reżyser"/>
+
+                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
+
+
+</Grid>
             </Grid>
         </DataTemplate>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <ContentControl Content="{Binding Path=NewFilm}" Margin="0,0,-199,0"
-            ContentControl.ContentTemplate="{StaticResource FilmTemplate}"/>
+        <TextBox  Text="{Binding NewFilmDirectorNames, Mode=TwoWay}" Margin="79,152,189.698,355.472" />
+
+        <TextBlock  Margin="0.208,175,130.623,324.472" Text="Kraj produkcji:"/>
+        <TextBox  Text="{Binding NewFilmCountries, Mode=TwoWay}" Margin="79,175,189.698,330.472" />
+
+
+
+        <ContentControl Grid.Row="0" Content="{Binding Path=NewFilm}" Margin="0,0,9.698,371.472"
+            ContentControl.ContentTemplate="{StaticResource AddFilmTemplate}"/>
+        <Button Grid.Row="1" x:Name="buttonAdd" Content="Dodaj film" Command="{Binding Path=Click_AddFilm}" Height="20" Width="75" Margin="0,0,0,0" RenderTransformOrigin="0.577,-6.053"/>
+
     </Grid>
 </UserControl>

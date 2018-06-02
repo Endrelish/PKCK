@@ -22,6 +22,9 @@
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto" />
 
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
@@ -35,32 +38,24 @@
                     <TextBlock  Grid.Row="3" Text="Data Premiery"/>
                     <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay, StringFormat={}{0:yyyy-MM-dd}}" Margin="0,0,-57,0" />
                     <TextBlock  Grid.Row="4" Text="Kraj produkcji:"/>
-                    <ItemsControl Grid.Column="1" Grid.Row="4" ItemsSource="{Binding Path=Kraje.Kraj}" >
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <!-- DataContext will be ListOfMessages[0], [1], ..., [n] -->
-                                <TextBox Text="{Binding .}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    <TextBlock  Grid.Row="5" Text="Reżyser"/>
-                    <ItemsControl Grid.Column="1" Grid.Row="5" ItemsSource="{Binding Path=Rezyser.Imie}" >
-                        <ItemsControl.ItemTemplate>
-                            <DataTemplate>
-                                <TextBox Text="{Binding .}" />
-                            </DataTemplate>
-                        </ItemsControl.ItemTemplate>
-                    </ItemsControl>
-                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
-                    <TextBlock  Grid.Row="7" Text="Cena"/>
-                    <TextBox Grid.Column="1" Grid.Row="7" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,-57,0" />
-                    <TextBlock  Grid.Row="8" Text="Ocena"/>
-                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,-57,0" />
 
+                    
+                    <TextBlock  Grid.Row="5" Text="Cena"/>
+                    <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="6" Text="Ocena"/>
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBlock  Grid.Row="7" Text="Gatunek"/>
+                    <ComboBox   Grid.Column="1" Grid.Row="7"  Margin="0 0 25 10" HorizontalContentAlignment="Left" 
+                              ItemsSource="{Binding ListOfGatunek}" SelectedItem="{Binding Gatunek}" />
+                    <TextBlock  Grid.Row="8" Text="Reżyser"/>
+
+                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
 
                 </Grid>
             </Grid>
         </DataTemplate>
+
+
     </UserControl.Resources>
 
 
@@ -70,11 +65,18 @@
             <ColumnDefinition Width="auto" />
 
         </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="auto" />
+        </Grid.RowDefinitions>
         <Grid Grid.Column="0">
-            <DataGrid AutoGenerateColumns="False"
+            <ScrollViewer  VerticalScrollBarVisibility="Auto" Height="Auto">
+                <DataGrid AutoGenerateColumns="False"
                   ItemsSource="{Binding Path=Films}" Margin="5" 
                   SelectedItem="{Binding Path=SelectedFilm}"
-                      IsReadOnly="True">
+                      IsReadOnly="True"
+                     >
 
                 <DataGrid.Columns>
                     <DataGridTextColumn Binding="{Binding Path=Tytul}" Header="Tytuł" />
@@ -82,15 +84,19 @@
                     <DataGridTextColumn Binding="{Binding Path=Cena}" Header="Cena" />
                 </DataGrid.Columns>
             </DataGrid>
+                </ScrollViewer>
         </Grid>
+        <TextBox Grid.Column="1" Text="{Binding SelectedFilmDirectorNames, Mode=TwoWay}" Margin="79,152,0,355.377" />
+
+        <TextBlock Grid.Column="1" Margin="0.208,175,130.623,324.472" Text="Kraj produkcji:"/>
+        <TextBox Grid.Column="1" Text="{Binding SelectedFilmCountries, Mode=TwoWay}" Margin="79,175,-139.377,330.472" />
 
 
-
-        <ContentControl Content="{Binding SelectedFilm}" Grid.Column="1" Margin="0,0,-198,0"
+        <ContentControl Content="{Binding SelectedFilm}" Grid.Column="1" Margin="0.208,0,-198.377,371.283"
             ContentControl.ContentTemplate="{StaticResource FilmTemplate}">
 
         </ContentControl>
-        <Button Grid.Column="1" x:Name="buttonSave" Content="Zapisz film" Command="{Binding Path=Click_SaveFilm}" Height="20" Width="75" Margin="127,0,-123,133"/>
+        <Button Grid.Column="1" x:Name="buttonSave" Content="Zapisz film" Command="{Binding Path=Click_SaveFilm}" Height="20" Width="75" Margin="192.208,219,-55.283,283.566"/>
         <Button Grid.Column="1" x:Name="buttonGenSVG" Content="Generuj SVG" Command="{Binding Path=Click_GenerateSvg}" Height="20" Width="80" Margin="0,300,-123,133"/>
         <Button Grid.Column="1" x:Name="buttonGenXHTML" Content="Generuj XHTML" Command="{Binding Path=Click_GenerateXhtml}" Height="20" Width="80" Margin="254,300,-123,133"/>
 

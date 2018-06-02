@@ -26,13 +26,13 @@
         <Kraj>USA</Kraj>
       </Kraje>
       <Reżyser>
-        <Imię>Frank</Imię>
+        <Imię>Frank1</Imię>
         <Nazwisko>Darabont</Nazwisko>
       </Reżyser>
       <Cena>12.99</Cena>
     </Film>
     <Film IdGatunku="Dr" Ocena="4">
-      <Tytuł>Skazani na Shawshank</Tytuł>
+      <Tytuł>Skazani na Shawshan</Tytuł>
       <OryginalnyTytuł>The Shawshank Redemption</OryginalnyTytuł>
       <DataPremiery>1994-12-25T00:00:00</DataPremiery>
       <Kraje>
@@ -40,7 +40,7 @@
       </Kraje>
       <Reżyser>
         <Imię>Frank</Imię>
-        <Nazwisko>Darabont</Nazwisko>
+        <Nazwisko>Darab</Nazwisko>
       </Reżyser>
       <Cena>13.99</Cena>
     </Film>
@@ -279,6 +279,137 @@
         <Nazwisko>Chmielewski</Nazwisko>
       </Reżyser>
       <Cena>12.99</Cena>
+    </Film>
+    <Film IdGatunku="Dr" Ocena="2">
+      <Tytuł>www</Tytuł>
+      <OryginalnyTytuł>wwww</OryginalnyTytuł>
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+        <Nazwisko>ww</Nazwisko>
+      </Reżyser>
+      <Cena>22</Cena>
+    </Film>
+    <Film IdGatunku="Dr" Ocena="0">
+      <Tytuł>tt</Tytuł>
+      <OryginalnyTytuł>tt</OryginalnyTytuł>
+      <DataPremiery>2001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+        <Nazwisko>tt</Nazwisko>
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film Ocena="0">
+      <Tytuł>tt</Tytuł>
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film Ocena="0">
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film Ocena="0">
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film IdGatunku="Dr" Ocena="0">
+      <Tytuł>s</Tytuł>
+      <OryginalnyTytuł>s</OryginalnyTytuł>
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+        <Nazwisko>s</Nazwisko>
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film IdGatunku="Dr" Ocena="0">
+      <Tytuł>cd</Tytuł>
+      <OryginalnyTytuł>cd</OryginalnyTytuł>
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj>cd</Kraj>
+      </Kraje>
+      <Reżyser>
+        <Imię>cd</Imię>
+        <Nazwisko>cd</Nazwisko>
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film Ocena="0">
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film Ocena="0">
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+      </Reżyser>
+      <Cena>0</Cena>
+    </Film>
+    <Film Ocena="0">
+      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
+      <Kraje>
+        <Kraj />
+        <Kraj />
+        <Kraj />
+      </Kraje>
+      <Reżyser>
+        <Imię />
+      </Reżyser>
+      <Cena>0</Cena>
     </Film>
   </Filmy>
 </BazaFilmów>

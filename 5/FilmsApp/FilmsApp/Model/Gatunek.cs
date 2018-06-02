@@ -14,5 +14,10 @@ namespace FilmsApp.Model
         public string Nazwa { get; set; }
         [XmlAttribute(AttributeName = "Id")]
         public string Id { get; set; }
+
+        public override string ToString()
+        {
+            return Nazwa;
+        }
     }
 }

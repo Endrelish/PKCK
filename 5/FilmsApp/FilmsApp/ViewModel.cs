@@ -43,13 +43,16 @@ namespace FilmsApp
 
                 if (value == "Wszystkie filmy")
                 {
+                    Baza = dataLoader?.LoadData();
                     VFilms = Visibility.Visible;
                     VAddFilm = Visibility.Collapsed;
+
 
 
                 }
                 else if (value == "Dodaj film")
                 {
+
                     VFilms = Visibility.Collapsed;
                     VAddFilm = Visibility.Visible;
                     createNewFilmObject();
@@ -92,7 +95,7 @@ namespace FilmsApp
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName_));
         }
 
-        public List<Film> Films { get; set; }
+        public ObservableCollection<Film> Films { get; set; } = new ObservableCollection<Film>();
         private Film selectedFilm;
 
         public Film SelectedFilm
@@ -102,26 +105,78 @@ namespace FilmsApp
             {
                 selectedFilm = value;
                 RaisePropertyChanged("SelectedFilm");
+                RaisePropertyChanged("SelectedFilmCountries");
+                RaisePropertyChanged("SelectedFilmDirectorNames");
+
+
+            }
+        }
+        public string SelectedFilmCountries
+        {
+            get
+            {
+                return String.Join(" ",selectedFilm?.Kraje);
+            }
+            set
+            {
+                selectedFilm.Kraje.Kraj = value.Split(null).ToList();
+                RaisePropertyChanged("SelectedFilmCountries");
+            }
+        }
+
+        public string SelectedFilmDirectorNames
+        {
+            get { return selectedFilm !=null ? String.Join(" ", selectedFilm?.Rezyser?.Imie) : null;}
+            set
+            {
+                selectedFilm.Rezyser.Imie = value.Split(null).ToList();
+                RaisePropertyChanged("SelectedFilmDirectorNames");
+            }
+        }
+
+        public string NewFilmCountries
+        {
+            get
+            {
+                return String.Join(" ", newFilm?.Kraje);
+            }
+            set
+            {
+                newFilm.Kraje.Kraj = value.Split(null).ToList();
+                RaisePropertyChanged("NewFilmCountries");
+            }
+        }
+
+        public string NewFilmDirectorNames
+        {
+            get { return newFilm != null ? String.Join(" ", newFilm?.Rezyser?.Imie) : null; }
+            set
+            {
+                newFilm.Rezyser.Imie = value.Split(null).ToList();
+                RaisePropertyChanged("NewFilmDirectorNames");
             }
         }
 
         public ICommand Click_SaveFilm { get; }
         public ICommand Click_GenerateSvg { get; }
         public ICommand Click_GenerateXhtml { get; }
+        public ICommand Click_AddFilm { get; }
 
-        private BazaFilmow baza { get; set; }
+        public BazaFilmow Baza { get; set; }
         private DataLoader dataLoader { get; set; }
-
+        public List<Gatunek> Genres { get; set; }
         public ViewModel()
         {
             SelectedElement = "Wszystkie filmy";
              int x = 0;
             dataLoader = new DataLoader("films.xml", "films1.xsd");
-            baza = dataLoader.LoadData();
+            Baza = dataLoader.LoadData();
+            Genres = Baza.Gatunki.Gatunek;
             // bool isValid = d.ValidateXmlSchema(b);
-            Films = baza.Filmy.Film;
+            Films = new ObservableCollection<Film>(Baza.Filmy.Film);
 
             Click_SaveFilm = new DelegateCommand(saveFilm);
+            Click_AddFilm = new DelegateCommand(addFilm);
             Click_GenerateSvg = new DelegateCommand(generateSvg);
             Click_GenerateXhtml = new DelegateCommand(generateXhtml);
             Directory.CreateDirectory("reports");
@@ -129,7 +184,9 @@ namespace FilmsApp
 
         private void saveFilm()
         {
-            dataLoader.SaveData(baza);
+            RaisePropertyChanged("SelectedFilmCountries");
+
+            dataLoader.SaveData(Baza);
         }
 
         private void generateSvg()
@@ -152,7 +209,17 @@ namespace FilmsApp
                 newFilm.Kraje.Kraj.Add("");
             }
             newFilm.Rezyser.Imie.Add("");
-            
+            newFilm.ListOfGatunek = Genres;
+
+        }
+
+        private void addFilm()
+        {
+            SelectedElement = "Wszystkie filmy";
+            Films.Add(newFilm);
+            RaisePropertyChanged("Films");
+            Baza.Filmy.Film = Films.ToList();
+            dataLoader.SaveData(Baza);
         }
 
         private void transform(FileInfo xslt, FileInfo input, FileInfo output)
@@ -177,6 +244,7 @@ namespace FilmsApp
             destination.XmlDocument.Save(output.FullName);
 
         }
+
     }
 }
 
