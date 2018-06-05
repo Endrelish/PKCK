@@ -109,6 +109,7 @@
                     </xsd:restriction>
                 </xsd:simpleType>
             </xsd:attribute>
+            <xsd:attribute name="Id" type="xsd:long" use="required"/>
         </xsd:complexType>
     </xsd:element>
     <xsd:element name="Tytuł" type="xsd:string"/>

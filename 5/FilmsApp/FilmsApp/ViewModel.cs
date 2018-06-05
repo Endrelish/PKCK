@@ -19,8 +19,7 @@ namespace FilmsApp
     public class ViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
-        public List<string> Elements { get; set; } = new List<string>() {"Wszystkie filmy", "Dodaj film"};
-        private string selectedElement;
+
 
         private Film newFilm;
 
@@ -34,6 +33,26 @@ namespace FilmsApp
             }
         }
 
+        private Gatunek newGenre;
+
+        public Gatunek NewGenre
+        {
+            get => newGenre;
+            set
+            {
+                newGenre = value;
+                RaisePropertyChanged("NewGenre");
+
+            }
+        }
+
+        #region Main checkbox
+
+        public List<string> Elements { get; set; } =
+            new List<string>() {"Wszystkie filmy", "Dodaj film", "Dodaj gatunek"};
+
+        private string selectedElement;
+
         public string SelectedElement
         {
             get { return selectedElement; }
@@ -46,23 +65,30 @@ namespace FilmsApp
                     Baza = dataLoader?.LoadData();
                     VFilms = Visibility.Visible;
                     VAddFilm = Visibility.Collapsed;
-
-
-
+                    VAddGenre = Visibility.Collapsed;
                 }
                 else if (value == "Dodaj film")
                 {
-
                     VFilms = Visibility.Collapsed;
                     VAddFilm = Visibility.Visible;
+                    VAddGenre = Visibility.Collapsed;
+
                     createNewFilmObject();
                     RaisePropertyChanged("NewFilm");
-
+                }
+                else if (value == "Dodaj gatunek")
+                {
+                    VFilms = Visibility.Collapsed;
+                    VAddFilm = Visibility.Collapsed;
+                    VAddGenre = Visibility.Visible;
+                    newGenre = new Gatunek();
+                    RaisePropertyChanged("NewGenre");
                 }
 
                 RaisePropertyChanged("SelectedElement");
                 RaisePropertyChanged("VFilms");
                 RaisePropertyChanged("VAddFilm");
+                RaisePropertyChanged("VAddGenre");
             }
         }
 
@@ -90,6 +116,22 @@ namespace FilmsApp
             }
         }
 
+
+        private Visibility vAddGenre;
+
+        public Visibility VAddGenre
+        {
+            get { return vAddGenre; }
+            private set
+            {
+                RaisePropertyChanged("VAddGenre");
+                vAddGenre = value;
+            }
+        }
+
+        #endregion
+
+
         private void RaisePropertyChanged(string propertyName_)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName_));
@@ -107,16 +149,12 @@ namespace FilmsApp
                 RaisePropertyChanged("SelectedFilm");
                 RaisePropertyChanged("SelectedFilmCountries");
                 RaisePropertyChanged("SelectedFilmDirectorNames");
-
-
             }
         }
+
         public string SelectedFilmCountries
         {
-            get
-            {
-                return String.Join(" ",selectedFilm?.Kraje);
-            }
+            get { return String.Join(" ", selectedFilm?.Kraje); }
             set
             {
                 selectedFilm.Kraje.Kraj = value.Split(null).ToList();
@@ -126,7 +164,7 @@ namespace FilmsApp
 
         public string SelectedFilmDirectorNames
         {
-            get { return selectedFilm !=null ? String.Join(" ", selectedFilm?.Rezyser?.Imie) : null;}
+            get { return selectedFilm != null ? String.Join(" ", selectedFilm?.Rezyser?.Imie) : null; }
             set
             {
                 selectedFilm.Rezyser.Imie = value.Split(null).ToList();
@@ -136,10 +174,7 @@ namespace FilmsApp
 
         public string NewFilmCountries
         {
-            get
-            {
-                return String.Join(" ", newFilm?.Kraje);
-            }
+            get { return String.Join(" ", newFilm?.Kraje); }
             set
             {
                 newFilm.Kraje.Kraj = value.Split(null).ToList();
@@ -161,24 +196,36 @@ namespace FilmsApp
         public ICommand Click_GenerateSvg { get; }
         public ICommand Click_GenerateXhtml { get; }
         public ICommand Click_AddFilm { get; }
+        public ICommand Click_AddGenre { get; }
+        public ICommand Click_DeleteFilm { get; }
 
         public BazaFilmow Baza { get; set; }
         private DataLoader dataLoader { get; set; }
-        public List<Gatunek> Genres { get; set; }
+        public ObservableCollection<Gatunek> Genres { get; set; }
+
         public ViewModel()
         {
             SelectedElement = "Wszystkie filmy";
-             int x = 0;
+            int x = 0;
             dataLoader = new DataLoader("films.xml", "films1.xsd");
             Baza = dataLoader.LoadData();
-            Genres = Baza.Gatunki.Gatunek;
-            // bool isValid = d.ValidateXmlSchema(b);
-            Films = new ObservableCollection<Film>(Baza.Filmy.Film);
+            Genres = new ObservableCollection<Gatunek>(Baza.Gatunki.Gatunek);
+            if (dataLoader.ValidateXmlSchema(Baza))
+            {
+                Films = new ObservableCollection<Film>(Baza.Filmy.Film);
+            }
+            else
+            {
+                MessageBox.Show("Wczytanie pliku xml nie powiodło się: plik niezgodny ze schematem");
+
+            }
 
             Click_SaveFilm = new DelegateCommand(saveFilm);
             Click_AddFilm = new DelegateCommand(addFilm);
+            Click_DeleteFilm = new DelegateCommand(deleteFilm);
             Click_GenerateSvg = new DelegateCommand(generateSvg);
             Click_GenerateXhtml = new DelegateCommand(generateXhtml);
+            Click_AddGenre = new DelegateCommand(addGenre);
             Directory.CreateDirectory("reports");
         }
 
@@ -186,7 +233,14 @@ namespace FilmsApp
         {
             RaisePropertyChanged("SelectedFilmCountries");
 
-            dataLoader.SaveData(Baza);
+            if (dataLoader.ValidateXmlSchema(Baza))
+            {
+                dataLoader.SaveData(Baza);
+            }
+            else
+            {
+                MessageBox.Show("Dane nie zgodne ze schematem");
+            }
         }
 
         private void generateSvg()
@@ -208,9 +262,9 @@ namespace FilmsApp
             {
                 newFilm.Kraje.Kraj.Add("");
             }
-            newFilm.Rezyser.Imie.Add("");
-            newFilm.ListOfGatunek = Genres;
 
+            newFilm.Rezyser.Imie.Add("");
+            newFilm.ListOfGatunek = Genres.ToList();
         }
 
         private void addFilm()
@@ -219,13 +273,73 @@ namespace FilmsApp
             Films.Add(newFilm);
             RaisePropertyChanged("Films");
             Baza.Filmy.Film = Films.ToList();
-            dataLoader.SaveData(Baza);
+            Genres = new ObservableCollection<Gatunek>(Baza.Gatunki.Gatunek);
+            long newId = Films.Max(x => x.Id) + 1;
+            NewFilm.Id = newId;
+            if (dataLoader.ValidateXmlSchema(Baza))
+            {
+                dataLoader.SaveData(Baza);
+            }
+            else
+            {
+                MessageBox.Show("Dane nie zgodne ze schematem");
+            }    
+        }
+
+        private void deleteFilm()
+        {
+            Baza.Filmy.Film.Remove(selectedFilm);
+            if (dataLoader.ValidateXmlSchema(Baza))
+            {
+                dataLoader.SaveData(Baza);
+            }
+            else
+            {
+                MessageBox.Show("Dane nie zgodne ze schematem");
+                return;
+            }
+            Films.Remove(selectedFilm);
+            RaisePropertyChanged("Films");
+        }
+
+        private void addGenre()
+        {
+            Genres.Add(newGenre);
+            RaisePropertyChanged("NewGenre");
+            if (newGenre.Nazwa.Length < 2)
+            {
+                MessageBox.Show("Zbyt krótka nazwa");
+                return;;
+            }
+            string id = newGenre.Nazwa.Substring(0, 2);
+            string orgID = newGenre.Nazwa.Substring(0, 2);
+            int num = 0;
+            while (Genres.Select(x => x.Id).Contains(id))
+            {
+                id += num;
+                num++;
+            }
+
+            newGenre.Id = id;
+            RaisePropertyChanged("Genres");
+            Baza.Gatunki.Gatunek = Genres.ToList();
+            Baza.Filmy.Film.ForEach(f => f.ListOfGatunek = Genres.ToList());
+            if (dataLoader.ValidateXmlSchema(Baza))
+            {
+                dataLoader.SaveData(Baza);
+            }
+            else
+            {
+                MessageBox.Show("Dane nie zgodne ze schematem");
+            }
+            NewGenre = new Gatunek();
+            SelectedElement = "Wszystkie filmy";
+
+
         }
 
         private void transform(FileInfo xslt, FileInfo input, FileInfo output)
         {
-         
-        
             // Compile stylesheet
             var processor = new Processor();
             var compiler = processor.NewXsltCompiler();
@@ -242,9 +356,6 @@ namespace FilmsApp
 
             // Save result to a file (or whatever else you wanna do)
             destination.XmlDocument.Save(output.FullName);
-
         }
-
     }
 }
-

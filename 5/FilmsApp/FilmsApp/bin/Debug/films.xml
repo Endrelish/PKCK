@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<BazaFilmów xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://www.example.org/baza">
+<BazaFilmów xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xsi:schemaLocation="http://www.example.org/baza films1.xsd" xmlns="http://www.example.org/baza">
   <Autorzy>
     <Autor>
       <Imię>Bartłomiej</Imię>
@@ -16,38 +16,39 @@
     <Gatunek Nazwa="Dramat" Id="Dr" />
     <Gatunek Nazwa="Komedia" Id="Ko" />
     <Gatunek Nazwa="Sci-Fi" Id="SF" />
+    <Gatunek Nazwa="nowyG" Id="no" />
   </Gatunki>
   <Filmy>
-    <Film IdGatunku="Dr" Ocena="5">
+    <Film IdGatunku="Dr" Ocena="5" Id="1">
       <Tytuł>Zielona Mila</Tytuł>
       <OryginalnyTytuł>The Green Mile</OryginalnyTytuł>
-      <DataPremiery>1999-12-06T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj>USA</Kraj>
-      </Kraje>
-      <Reżyser>
-        <Imię>Frank1</Imię>
-        <Nazwisko>Darabont</Nazwisko>
-      </Reżyser>
-      <Cena>12.99</Cena>
-    </Film>
-    <Film IdGatunku="Dr" Ocena="4">
-      <Tytuł>Skazani na Shawshan</Tytuł>
-      <OryginalnyTytuł>The Shawshank Redemption</OryginalnyTytuł>
-      <DataPremiery>1994-12-25T00:00:00</DataPremiery>
+      <DataPremiery>1999-12-06</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
       </Kraje>
       <Reżyser>
         <Imię>Frank</Imię>
-        <Nazwisko>Darab</Nazwisko>
+        <Nazwisko>Darabont</Nazwisko>
+      </Reżyser>
+      <Cena>12.99</Cena>
+    </Film>
+    <Film IdGatunku="Dr" Ocena="4" Id="2">
+      <Tytuł>Skazani na Shawshank</Tytuł>
+      <OryginalnyTytuł>The Shawshank Redemption</OryginalnyTytuł>
+      <DataPremiery>1994-12-25</DataPremiery>
+      <Kraje>
+        <Kraj>USA</Kraj>
+      </Kraje>
+      <Reżyser>
+        <Imię>Frank</Imię>
+        <Nazwisko>Darabont</Nazwisko>
       </Reżyser>
       <Cena>13.99</Cena>
     </Film>
-    <Film IdGatunku="Dr" Ocena="5">
+    <Film IdGatunku="Dr" Ocena="5" Id="3">
       <Tytuł>Taksówkarz</Tytuł>
       <OryginalnyTytuł>Taksówkarz</OryginalnyTytuł>
-      <DataPremiery>1976-12-06T00:00:00</DataPremiery>
+      <DataPremiery>1976-12-06</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
       </Kraje>
@@ -57,9 +58,9 @@
       </Reżyser>
       <Cena>14.99</Cena>
     </Film>
-    <Film IdGatunku="Dr" Ocena="4">
+    <Film IdGatunku="Dr" Ocena="4" Id="4">
       <Tytuł>Babel</Tytuł>
-      <DataPremiery>2006-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2006-12-25</DataPremiery>
       <Kraje>
         <Kraj>Francja</Kraj>
         <Kraj>Meksyk</Kraj>
@@ -72,10 +73,10 @@
       </Reżyser>
       <Cena>15.99</Cena>
     </Film>
-    <Film IdGatunku="Dr" Ocena="5">
+    <Film IdGatunku="Dr" Ocena="5" Id="5">
       <Tytuł>Życie za życie</Tytuł>
       <OryginalnyTytuł>The Life of David Gale</OryginalnyTytuł>
-      <DataPremiery>2003-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2003-12-25</DataPremiery>
       <Kraje>
         <Kraj>Niemcy</Kraj>
         <Kraj>USA</Kraj>
@@ -87,9 +88,9 @@
       </Reżyser>
       <Cena>16.99</Cena>
     </Film>
-    <Film IdGatunku="Dr" Ocena="4">
+    <Film IdGatunku="Ko" Ocena="4" Id="6">
       <Tytuł>Wszyscy jesteśmy Chrystusami</Tytuł>
-      <DataPremiery>2006-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2006-12-25</DataPremiery>
       <Kraje>
         <Kraj>Polska</Kraj>
       </Kraje>
@@ -99,9 +100,9 @@
       </Reżyser>
       <Cena>15.99</Cena>
     </Film>
-    <Film IdGatunku="SF" Ocena="5">
+    <Film IdGatunku="SF" Ocena="5" Id="7">
       <Tytuł>Avatar</Tytuł>
-      <DataPremiery>2009-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2009-12-25</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
         <Kraj>Wielka Brytania</Kraj>
@@ -112,10 +113,10 @@
       </Reżyser>
       <Cena>14.99</Cena>
     </Film>
-    <Film IdGatunku="SF" Ocena="5">
+    <Film IdGatunku="SF" Ocena="5" Id="8">
       <Tytuł>Terminator</Tytuł>
       <OryginalnyTytuł>The Terminator</OryginalnyTytuł>
-      <DataPremiery>1984-12-25T00:00:00</DataPremiery>
+      <DataPremiery>1984-12-25</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
         <Kraj>Wielka Brytania</Kraj>
@@ -126,10 +127,10 @@
       </Reżyser>
       <Cena>13.99</Cena>
     </Film>
-    <Film IdGatunku="Ko" Ocena="5">
+    <Film IdGatunku="Ko" Ocena="5" Id="9">
       <Tytuł>Bruce Wszechmogący</Tytuł>
       <OryginalnyTytuł>Bruce Almighty</OryginalnyTytuł>
-      <DataPremiery>2003-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2003-12-25</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
       </Kraje>
@@ -139,9 +140,9 @@
       </Reżyser>
       <Cena>12.99</Cena>
     </Film>
-    <Film IdGatunku="SF" Ocena="4">
+    <Film IdGatunku="SF" Ocena="4" Id="10">
       <Tytuł>Interstellar</Tytuł>
-      <DataPremiery>2014-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2014-12-25</DataPremiery>
       <Kraje>
         <Kraj>Kanada</Kraj>
         <Kraj>USA</Kraj>
@@ -153,9 +154,9 @@
       </Reżyser>
       <Cena>11.99</Cena>
     </Film>
-    <Film IdGatunku="SF" Ocena="2">
+    <Film IdGatunku="SF" Ocena="2" Id="11">
       <Tytuł>Iron Man</Tytuł>
-      <DataPremiery>2008-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2008-12-25</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
       </Kraje>
@@ -165,10 +166,10 @@
       </Reżyser>
       <Cena>10.99</Cena>
     </Film>
-    <Film IdGatunku="SF" Ocena="2">
+    <Film IdGatunku="SF" Ocena="2" Id="12">
       <Tytuł>Avengers</Tytuł>
       <OryginalnyTytuł>The Avengers</OryginalnyTytuł>
-      <DataPremiery>2012-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2012-12-25</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
       </Kraje>
@@ -178,10 +179,10 @@
       </Reżyser>
       <Cena>9.99</Cena>
     </Film>
-    <Film IdGatunku="SF" Ocena="3">
+    <Film IdGatunku="SF" Ocena="3" Id="13">
       <Tytuł>Marsjanin</Tytuł>
       <OryginalnyTytuł>The Martian</OryginalnyTytuł>
-      <DataPremiery>2015-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2015-12-25</DataPremiery>
       <Kraje>
         <Kraj>USA</Kraj>
         <Kraj>Wielka Brytania</Kraj>
@@ -192,9 +193,9 @@
       </Reżyser>
       <Cena>9.99</Cena>
     </Film>
-    <Film IdGatunku="Ko" Ocena="5">
+    <Film IdGatunku="Ko" Ocena="5" Id="14">
       <Tytuł>Killer</Tytuł>
-      <DataPremiery>1997-12-25T00:00:00</DataPremiery>
+      <DataPremiery>1997-12-25</DataPremiery>
       <Kraje>
         <Kraj>Polska</Kraj>
       </Kraje>
@@ -204,9 +205,9 @@
       </Reżyser>
       <Cena>10.99</Cena>
     </Film>
-    <Film IdGatunku="Ko" Ocena="5">
+    <Film IdGatunku="Ko" Ocena="5" Id="15">
       <Tytuł>Chłopaki nie płaczą</Tytuł>
-      <DataPremiery>2000-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2000-12-25</DataPremiery>
       <Kraje>
         <Kraj>Polska</Kraj>
       </Kraje>
@@ -216,22 +217,10 @@
       </Reżyser>
       <Cena>12.99</Cena>
     </Film>
-    <Film IdGatunku="Ko" Ocena="4">
-      <Tytuł>Miś</Tytuł>
-      <DataPremiery>1980-12-25T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj>Polska</Kraj>
-      </Kraje>
-      <Reżyser>
-        <Imię>Stanisław</Imię>
-        <Nazwisko>Bareja</Nazwisko>
-      </Reżyser>
-      <Cena>14.99</Cena>
-    </Film>
-    <Film IdGatunku="Ko" Ocena="5">
+    <Film IdGatunku="Ko" Ocena="5" Id="17">
       <Tytuł>To właśnie miłość</Tytuł>
       <OryginalnyTytuł>Love Actually</OryginalnyTytuł>
-      <DataPremiery>2003-12-25T00:00:00</DataPremiery>
+      <DataPremiery>2003-12-25</DataPremiery>
       <Kraje>
         <Kraj>Polska</Kraj>
       </Kraje>
@@ -241,10 +230,10 @@
       </Reżyser>
       <Cena>16.99</Cena>
     </Film>
-    <Film IdGatunku="Ko" Ocena="3">
+    <Film IdGatunku="Ko" Ocena="3" Id="18">
       <Tytuł>Kac Vegas</Tytuł>
       <OryginalnyTytuł>The Hangover</OryginalnyTytuł>
-      <DataPremiery>2009-08-07T00:00:00</DataPremiery>
+      <DataPremiery>2009-08-07</DataPremiery>
       <Kraje>
         <Kraj>Niemcy</Kraj>
         <Kraj>USA</Kraj>
@@ -255,10 +244,10 @@
       </Reżyser>
       <Cena>15.99</Cena>
     </Film>
-    <Film IdGatunku="Ko" Ocena="3">
+    <Film IdGatunku="Ko" Ocena="3" Id="19">
       <Tytuł>Głupi i głupszy</Tytuł>
       <OryginalnyTytuł>Dumb &amp; Dumber</OryginalnyTytuł>
-      <DataPremiery>1994-12-25T00:00:00</DataPremiery>
+      <DataPremiery>1994-12-25</DataPremiery>
       <Kraje>
         <Kraj>Polska</Kraj>
       </Kraje>
@@ -267,149 +256,6 @@
         <Nazwisko>Farrally</Nazwisko>
       </Reżyser>
       <Cena>14.99</Cena>
-    </Film>
-    <Film IdGatunku="Ko" Ocena="4">
-      <Tytuł>Jak rozpętałem drugą wojnę światową</Tytuł>
-      <DataPremiery>1969-12-25T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj>Polska</Kraj>
-      </Kraje>
-      <Reżyser>
-        <Imię>Tadeusz</Imię>
-        <Nazwisko>Chmielewski</Nazwisko>
-      </Reżyser>
-      <Cena>12.99</Cena>
-    </Film>
-    <Film IdGatunku="Dr" Ocena="2">
-      <Tytuł>www</Tytuł>
-      <OryginalnyTytuł>wwww</OryginalnyTytuł>
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-        <Nazwisko>ww</Nazwisko>
-      </Reżyser>
-      <Cena>22</Cena>
-    </Film>
-    <Film IdGatunku="Dr" Ocena="0">
-      <Tytuł>tt</Tytuł>
-      <OryginalnyTytuł>tt</OryginalnyTytuł>
-      <DataPremiery>2001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-        <Nazwisko>tt</Nazwisko>
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film Ocena="0">
-      <Tytuł>tt</Tytuł>
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film Ocena="0">
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film Ocena="0">
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film IdGatunku="Dr" Ocena="0">
-      <Tytuł>s</Tytuł>
-      <OryginalnyTytuł>s</OryginalnyTytuł>
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-        <Nazwisko>s</Nazwisko>
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film IdGatunku="Dr" Ocena="0">
-      <Tytuł>cd</Tytuł>
-      <OryginalnyTytuł>cd</OryginalnyTytuł>
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj>cd</Kraj>
-      </Kraje>
-      <Reżyser>
-        <Imię>cd</Imię>
-        <Nazwisko>cd</Nazwisko>
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film Ocena="0">
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film Ocena="0">
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-      </Reżyser>
-      <Cena>0</Cena>
-    </Film>
-    <Film Ocena="0">
-      <DataPremiery>0001-01-01T00:00:00</DataPremiery>
-      <Kraje>
-        <Kraj />
-        <Kraj />
-        <Kraj />
-      </Kraje>
-      <Reżyser>
-        <Imię />
-      </Reżyser>
-      <Cena>0</Cena>
     </Film>
   </Filmy>
 </BazaFilmów>

@@ -46,10 +46,10 @@
                                 ItemsSource="{Binding ListOfGatunek}" SelectedItem="{Binding Gatunek}" />
                     <TextBlock  Grid.Row="8" Text="Reżyser"/>
 
-                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0"/>
 
 
-</Grid>
+                </Grid>
             </Grid>
         </DataTemplate>
     </UserControl.Resources>
@@ -57,18 +57,18 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto" />
-            <RowDefinition Height="Auto" />
+
         </Grid.RowDefinitions>
-        <TextBox  Text="{Binding NewFilmDirectorNames, Mode=TwoWay}" Margin="79,152,189.698,355.472" />
+        <TextBox  Text="{Binding NewFilmDirectorNames, Mode=TwoWay}" Margin="79,152,188.698,181.396" />
 
-        <TextBlock  Margin="0.208,175,130.623,324.472" Text="Kraj produkcji:"/>
-        <TextBox  Text="{Binding NewFilmCountries, Mode=TwoWay}" Margin="79,175,189.698,330.472" />
+        <TextBlock  Margin="0,175,129.698,133.245" Text="Kraj produkcji:"/>
+        <TextBox  Text="{Binding NewFilmCountries, Mode=TwoWay}" Margin="79,175,188.698,158.208" />
 
 
 
-        <ContentControl Grid.Row="0" Content="{Binding Path=NewFilm}" Margin="0,0,9.698,371.472"
+        <ContentControl Grid.Row="0" Content="{Binding Path=NewFilm}" Margin="0,0,9.698,199.396"
             ContentControl.ContentTemplate="{StaticResource AddFilmTemplate}"/>
-        <Button Grid.Row="1" x:Name="buttonAdd" Content="Dodaj film" Command="{Binding Path=Click_AddFilm}" Height="20" Width="75" Margin="0,0,0,0" RenderTransformOrigin="0.577,-6.053"/>
+        <Button  x:Name="buttonAdd" Content="Dodaj film" Command="{Binding Path=Click_AddFilm}"  Margin="80,217,188.698,115.491" />
 
     </Grid>
 </UserControl>

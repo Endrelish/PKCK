@@ -44,7 +44,7 @@
                             <xsl:value-of select="$DrCount"/>
                         </Ilość>
                         <ŚredniaOcen>
-                            <xsl:value-of select="sum(/baza:BazaFilmów/baza:Filmy/baza:Film[@IdGatunku='Dr']/@Ocena) div $DrCount"/>
+                            <xsl:value-of select="round(sum(/baza:BazaFilmów/baza:Filmy/baza:Film[@IdGatunku='Dr']/@Ocena)*100 div $DrCount) div 100"/>
                         </ŚredniaOcen>
                     </Dramat>
                     <Komedia>
@@ -53,7 +53,7 @@
                             <xsl:value-of select="$KoCount"/>
                         </Ilość>
                          <ŚredniaOcen>
-                             <xsl:value-of select="sum(./baza:Filmy/baza:Film[@IdGatunku='Ko']/@Ocena) div $KoCount"/>
+                             <xsl:value-of select="round(sum(/baza:BazaFilmów/baza:Filmy/baza:Film[@IdGatunku='Dr']/@Ocena)*100 div $KoCount) div 100"/>
                          </ŚredniaOcen>
                     </Komedia>
                     <Sci-Fi>
@@ -62,7 +62,7 @@
                             <xsl:value-of select="$SFCount"/>
                         </Ilość>
                          <ŚredniaOcen>
-                             <xsl:value-of select="sum(./baza:Filmy/baza:Film[@IdGatunku='SF']/@Ocena) div $SFCount"/>
+                             <xsl:value-of select="round(sum(/baza:BazaFilmów/baza:Filmy/baza:Film[@IdGatunku='Dr']/@Ocena)*100 div $SFCount) div 100"/>
                          </ŚredniaOcen>
                     </Sci-Fi>
                     <Wszystkie>
@@ -71,7 +71,7 @@
                             <xsl:value-of select="$FilmsCount"/>
                         </Ilość>
                          <ŚredniaOcen>
-                             <xsl:value-of select="sum(./baza:Filmy/baza:Film/@Ocena) div $FilmsCount"/>
+                             <xsl:value-of select="round(sum(/baza:BazaFilmów/baza:Filmy/baza:Film/@Ocena)*100 div $FilmsCount) div 100"/>
                          </ŚredniaOcen>
                     </Wszystkie>
                 </Gatunki>

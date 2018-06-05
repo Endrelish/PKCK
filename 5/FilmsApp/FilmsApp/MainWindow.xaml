@@ -20,5 +20,7 @@
 
         <view:AllFilms Visibility="{Binding Path=VFilms}"  HorizontalAlignment="Left" Height="278" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="517"/>
         <view:AddFilm Visibility="{Binding Path=VAddFilm}"  HorizontalAlignment="Left" Height="278" Grid.Row="1" VerticalAlignment="Top" Width="517" Margin="0,10,0,0"/>
+        <view:AddGenre Visibility="{Binding Path=VAddGenre}"  HorizontalAlignment="Left" Height="278" Grid.Row="1" VerticalAlignment="Top" Width="517" Margin="0,10,0,0"/>
+
     </Grid>
 </Window>

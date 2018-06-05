@@ -33,5 +33,7 @@ namespace FilmsApp.Model
 
         [XmlAttribute(AttributeName = "xmlns")]
         public string Xmlns { get; set; }
+        [XmlAttribute(AttributeName = "schemaLocation", Namespace = "http://www.w3.org/2001/XMLSchema-instance")]
+        public string SchemaLocation { get; set; }
     }
 }

@@ -29,27 +29,27 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
-                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="200" />
                     </Grid.ColumnDefinitions>
                     <TextBlock Text="Tytuł" Grid.Row="0"/>
-                    <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Tytul,Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding Tytul,Mode=TwoWay}" Margin="0,0,0,0" />
                     <TextBlock  Grid.Row="2" Text="Oryginalny Tytuł"/>
-                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding OryginalnyTytul, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="2" Text="{Binding OryginalnyTytul, Mode=TwoWay}" Margin="0,0,0,0" />
                     <TextBlock  Grid.Row="3" Text="Data Premiery"/>
-                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay, StringFormat={}{0:yyyy-MM-dd}}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="3" Text="{Binding DataPremiery, Mode=TwoWay, StringFormat={}{0:yyyy-MM-dd}}" Margin="0,0,0,0" />
                     <TextBlock  Grid.Row="4" Text="Kraj produkcji:"/>
 
-                    
+
                     <TextBlock  Grid.Row="5" Text="Cena"/>
-                    <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="5" Text="{Binding Cena, Mode=TwoWay}" Margin="0,0,0,0" />
                     <TextBlock  Grid.Row="6" Text="Ocena"/>
-                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="6" Text="{Binding Ocena, Mode=TwoWay}" Margin="0,0,0,0" />
                     <TextBlock  Grid.Row="7" Text="Gatunek"/>
-                    <ComboBox   Grid.Column="1" Grid.Row="7"  Margin="0 0 25 10" HorizontalContentAlignment="Left" 
+                    <ComboBox   Grid.Column="1" Grid.Row="7"  Margin="0 0 0 10" HorizontalContentAlignment="Left" 
                               ItemsSource="{Binding ListOfGatunek}" SelectedItem="{Binding Gatunek}" />
                     <TextBlock  Grid.Row="8" Text="Reżyser"/>
 
-                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,-57,0" />
+                    <TextBox Grid.Column="1" Grid.Row="8" Text="{Binding Rezyser.Nazwisko, Mode=TwoWay}" Margin="0,0,10,0" Grid.RowSpan="2" />
 
                 </Grid>
             </Grid>
@@ -66,7 +66,7 @@
 
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
+            <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
             <RowDefinition Height="auto" />
         </Grid.RowDefinitions>
@@ -78,27 +78,35 @@
                       IsReadOnly="True"
                      >
 
-                <DataGrid.Columns>
-                    <DataGridTextColumn Binding="{Binding Path=Tytul}" Header="Tytuł" />
-                    <DataGridTextColumn Binding="{Binding Path=Rezyser}" Header="Reżyser" />
-                    <DataGridTextColumn Binding="{Binding Path=Cena}" Header="Cena" />
-                </DataGrid.Columns>
-            </DataGrid>
-                </ScrollViewer>
+                    <DataGrid.Columns>
+                        <DataGridTextColumn Binding="{Binding Path=Tytul}" Header="Tytuł" />
+                        <DataGridTextColumn Binding="{Binding Path=Rezyser}" Header="Reżyser" />
+                        <DataGridTextColumn Binding="{Binding Path=Cena}" Header="Cena" />
+                    </DataGrid.Columns>
+                </DataGrid>
+            </ScrollViewer>
         </Grid>
-        <TextBox Grid.Column="1" Text="{Binding SelectedFilmDirectorNames, Mode=TwoWay}" Margin="79,152,0,355.377" />
+        <!--<TextBox Grid.Column="1" Text="{Binding SelectedFilmDirectorNames, Mode=TwoWay}" Margin="79.208,152,-0.377,479.755" />
 
         <TextBlock Grid.Column="1" Margin="0.208,175,130.623,324.472" Text="Kraj produkcji:"/>
-        <TextBox Grid.Column="1" Text="{Binding SelectedFilmCountries, Mode=TwoWay}" Margin="79,175,-139.377,330.472" />
+        <TextBox Grid.Column="1" Text="{Binding SelectedFilmCountries, Mode=TwoWay}" Margin="79.208,175,-122.377,456.358" />-->
+        <TextBox Grid.Column="1" Grid.Row="0" Text="{Binding SelectedFilmDirectorNames, Mode=TwoWay}" Margin="80.208,150,-0.377,492.038" />
 
+        <TextBlock Grid.Column="1" Margin="0.208,175,130.623,324.472" Text="Kraj produkcji:"/>
+        <TextBox Grid.Column="1" Text="{Binding SelectedFilmCountries, Mode=TwoWay}" Margin="80.208,175,-63.132,466.321" />
 
-        <ContentControl Content="{Binding SelectedFilm}" Grid.Column="1" Margin="0.208,0,-198.377,371.283"
+        <ContentControl Content="{Binding SelectedFilm}" Grid.Column="1" Margin="0,0,-160.377,371.358"
             ContentControl.ContentTemplate="{StaticResource FilmTemplate}">
 
         </ContentControl>
-        <Button Grid.Column="1" x:Name="buttonSave" Content="Zapisz film" Command="{Binding Path=Click_SaveFilm}" Height="20" Width="75" Margin="192.208,219,-55.283,283.566"/>
+        <Button Grid.Column="1" x:Name="buttonSave" Content="Zapisz film" Command="{Binding Path=Click_SaveFilm}" Height="20" Width="75" Margin="192.208,219,0.283,350"/>
+        <Button Grid.Column="1" x:Name="buttonDelete" Content="Usuń film" Command="{Binding Path=Click_DeleteFilm}" Height="20" Width="75" Margin="192.208,219,0.283,283.566"/>
+
         <Button Grid.Column="1" x:Name="buttonGenSVG" Content="Generuj SVG" Command="{Binding Path=Click_GenerateSvg}" Height="20" Width="80" Margin="0,300,-123,133"/>
         <Button Grid.Column="1" x:Name="buttonGenXHTML" Content="Generuj XHTML" Command="{Binding Path=Click_GenerateXhtml}" Height="20" Width="80" Margin="254,300,-123,133"/>
+
+       
+
 
     </Grid>
 
