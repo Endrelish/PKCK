@@ -49,7 +49,7 @@ namespace FilmsApp
         #region Main checkbox
 
         public List<string> Elements { get; set; } =
-            new List<string>() {"Wszystkie filmy", "Dodaj film", "Dodaj gatunek"};
+            new List<string>() {"Wszystkie filmy", "Dodaj film"};
 
         private string selectedElement;
 
@@ -65,30 +65,20 @@ namespace FilmsApp
                     Baza = dataLoader?.LoadData();
                     VFilms = Visibility.Visible;
                     VAddFilm = Visibility.Collapsed;
-                    VAddGenre = Visibility.Collapsed;
                 }
                 else if (value == "Dodaj film")
                 {
                     VFilms = Visibility.Collapsed;
                     VAddFilm = Visibility.Visible;
-                    VAddGenre = Visibility.Collapsed;
 
                     createNewFilmObject();
                     RaisePropertyChanged("NewFilm");
                 }
-                else if (value == "Dodaj gatunek")
-                {
-                    VFilms = Visibility.Collapsed;
-                    VAddFilm = Visibility.Collapsed;
-                    VAddGenre = Visibility.Visible;
-                    newGenre = new Gatunek();
-                    RaisePropertyChanged("NewGenre");
-                }
+              
 
                 RaisePropertyChanged("SelectedElement");
                 RaisePropertyChanged("VFilms");
                 RaisePropertyChanged("VAddFilm");
-                RaisePropertyChanged("VAddGenre");
             }
         }
 
@@ -113,19 +103,6 @@ namespace FilmsApp
             {
                 RaisePropertyChanged("VAddFilm");
                 vAddFilm = value;
-            }
-        }
-
-
-        private Visibility vAddGenre;
-
-        public Visibility VAddGenre
-        {
-            get { return vAddGenre; }
-            private set
-            {
-                RaisePropertyChanged("VAddGenre");
-                vAddGenre = value;
             }
         }
 
@@ -196,7 +173,6 @@ namespace FilmsApp
         public ICommand Click_GenerateSvg { get; }
         public ICommand Click_GenerateXhtml { get; }
         public ICommand Click_AddFilm { get; }
-        public ICommand Click_AddGenre { get; }
         public ICommand Click_DeleteFilm { get; }
 
         public BazaFilmow Baza { get; set; }
@@ -225,7 +201,6 @@ namespace FilmsApp
             Click_DeleteFilm = new DelegateCommand(deleteFilm);
             Click_GenerateSvg = new DelegateCommand(generateSvg);
             Click_GenerateXhtml = new DelegateCommand(generateXhtml);
-            Click_AddGenre = new DelegateCommand(addGenre);
             Directory.CreateDirectory("reports");
         }
 
@@ -302,41 +277,7 @@ namespace FilmsApp
             RaisePropertyChanged("Films");
         }
 
-        private void addGenre()
-        {
-            Genres.Add(newGenre);
-            RaisePropertyChanged("NewGenre");
-            if (newGenre.Nazwa.Length < 2)
-            {
-                MessageBox.Show("Zbyt krótka nazwa");
-                return;;
-            }
-            string id = newGenre.Nazwa.Substring(0, 2);
-            string orgID = newGenre.Nazwa.Substring(0, 2);
-            int num = 0;
-            while (Genres.Select(x => x.Id).Contains(id))
-            {
-                id += num;
-                num++;
-            }
-
-            newGenre.Id = id;
-            RaisePropertyChanged("Genres");
-            Baza.Gatunki.Gatunek = Genres.ToList();
-            Baza.Filmy.Film.ForEach(f => f.ListOfGatunek = Genres.ToList());
-            if (dataLoader.ValidateXmlSchema(Baza))
-            {
-                dataLoader.SaveData(Baza);
-            }
-            else
-            {
-                MessageBox.Show("Dane nie zgodne ze schematem");
-            }
-            NewGenre = new Gatunek();
-            SelectedElement = "Wszystkie filmy";
-
-
-        }
+      
 
         private void transform(FileInfo xslt, FileInfo input, FileInfo output)
         {
