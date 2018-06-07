@@ -16,7 +16,6 @@
     <Gatunek Nazwa="Dramat" Id="Dr" />
     <Gatunek Nazwa="Komedia" Id="Ko" />
     <Gatunek Nazwa="Sci-Fi" Id="SF" />
-    <Gatunek Nazwa="nowyG" Id="no" />
   </Gatunki>
   <Filmy>
     <Film IdGatunku="Dr" Ocena="5" Id="1">

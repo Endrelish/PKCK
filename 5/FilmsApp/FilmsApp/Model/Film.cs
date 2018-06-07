@@ -55,5 +55,13 @@ namespace FilmsApp.Model
         }
 
         [XmlIgnore] public List<Gatunek> ListOfGatunek { get; set; }
+
+        public override bool Equals(object obj)
+        {
+            if (obj == null || !(obj is Film))
+                return false;
+            else
+                return this.Id == ((Film)obj).Id;
+        }
     }
 }

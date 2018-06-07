@@ -46,8 +46,6 @@ namespace FilmsApp
 
         public void SaveData(BazaFilmow bazaFilmow)
         {
-            if (XmlFile.Exists) XmlFile.Delete();
-
             Stream stream = new FileStream(XmlFile.FullName, FileMode.Create);
             Serializer.Serialize(stream, bazaFilmow);
             stream.Close();
@@ -57,9 +55,11 @@ namespace FilmsApp
         {
             try
             {
+                var stringwriter = new StringWriter();               
+                Serializer.Serialize(stringwriter, bazaFilmow);
                 XmlDocument xmld = new XmlDocument();
-                string xmlText = File.ReadAllText(XmlFile.Name);
-                xmld.LoadXml(xmlText);
+                string text = stringwriter.ToString();
+                xmld.LoadXml(text);
                 xmld.Schemas.Add("http://www.example.org/baza", SchemaFile.FullName);
                 xmld.Validate(ValidationCallBack);
                 return true;

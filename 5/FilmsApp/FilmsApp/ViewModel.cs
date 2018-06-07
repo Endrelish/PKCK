@@ -207,7 +207,7 @@ namespace FilmsApp
         private void saveFilm()
         {
             RaisePropertyChanged("SelectedFilmCountries");
-
+            Baza.Filmy.Film = Films.ToList();
             if (dataLoader.ValidateXmlSchema(Baza))
             {
                 dataLoader.SaveData(Baza);
@@ -244,26 +244,30 @@ namespace FilmsApp
 
         private void addFilm()
         {
-            SelectedElement = "Wszystkie filmy";
+            
             Films.Add(newFilm);
-            RaisePropertyChanged("Films");
             Baza.Filmy.Film = Films.ToList();
-            Genres = new ObservableCollection<Gatunek>(Baza.Gatunki.Gatunek);
             long newId = Films.Max(x => x.Id) + 1;
             NewFilm.Id = newId;
             if (dataLoader.ValidateXmlSchema(Baza))
             {
                 dataLoader.SaveData(Baza);
+                SelectedElement = "Wszystkie filmy";
             }
             else
             {
                 MessageBox.Show("Dane nie zgodne ze schematem");
-            }    
+                Baza.Filmy.Film.Remove(newFilm);
+                Films.Remove(newFilm);
+            }
+            RaisePropertyChanged("Films");
+
         }
 
         private void deleteFilm()
         {
-            Baza.Filmy.Film.Remove(selectedFilm);
+            
+            Baza.Filmy.Film.Remove(SelectedFilm);
             if (dataLoader.ValidateXmlSchema(Baza))
             {
                 dataLoader.SaveData(Baza);
