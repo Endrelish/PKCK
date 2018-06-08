@@ -10,7 +10,10 @@
         <xsd:attribute name="Nazwa" type="xsd:string" use="required"/>
         <xsd:attribute name="Id" type="xsd:string" use="required"/>
     </xsd:attributeGroup>
-
+<xsd:complexType name="na">
+    <xsd:attribute name="f" type="xsd:string" />
+    <xsd:attribute name="df" type="xsd:int" />
+</xsd:complexType>
     <!--OSOBA - GRUPA-->
     <xsd:group name="Osoba">
         <xsd:sequence>
